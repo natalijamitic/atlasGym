@@ -1,0 +1,381 @@
+body {
+  background-color: white;
+}
+
+.blck {
+  background: rgba(0,0,0,0.4) !important;
+  z-index: 99;
+}
+
+@media only screen and (max-width: 991px) {
+  .blck {
+    visibility: hidden;
+  }
+}
+
+/* Navbar Decoration */
+
+.mynav {
+  background: #fff !important;
+}
+
+.navbar-brand {
+  margin-left: 100px;
+  margin-top: 5px;
+}
+
+.navbar-brand img {
+  width: 200px;
+}
+
+.navbar-brand .logoB {
+  display: none;
+}
+.navbar-brand .logoW {
+  display: inline;
+}
+
+.mynav a {
+    margin-right: 30px;
+    color: #181174 !important;
+    border-bottom: 2px solid transparent;
+}
+
+.mynav a:hover {
+  border-bottom: 2px solid #181174;
+}
+
+.active a {
+    border-bottom: 2px solid #181174;
+}
+
+.mrt a {
+  background: #181174;
+  color: #fff !important;
+  border-radius: 50px;
+  padding: 10px 25px !important;
+  box-shadow: 3px 3px 5px #777;
+  width: 120px;
+  text-align: center;
+}
+
+.mrt a:hover {
+  background: #f73562;
+  box-shadow: none;
+}
+
+.navbar-brand:hover {
+  border-bottom: 2px solid transparent !important;
+}
+
+
+.trn {
+  background: transparent !important;
+  z-index: 99;
+}
+
+.trn a {
+    margin-right: 30px;
+    color: #fff !important;
+    border-bottom: 2px solid transparent;
+}
+
+.trn a:hover {
+  border-bottom: 2px solid #fcd307;
+}
+
+.trn .active a {
+    border-bottom: 2px solid #fcd307;
+}
+
+.dropdown-item:hover {
+  background-color: #fcd307 !important;
+  color: black !important;
+}
+
+.mrt a {
+  background: #fcd307;
+  color: #000 !important;
+  border-radius: 50px;
+  padding: 10px 25px !important;
+  box-shadow: 3px 3px 5px #333;
+  width: 160px;
+  text-align: center;
+}
+
+.mrt a:hover {
+  background: #fff;
+  box-shadow: none;
+}
+
+
+.fixed-top.scrolled {
+  background: #fff !important;
+  transition: background-color 200ms linear;
+  margin-top: 0 !important;
+  box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.4) !important;
+}
+
+.scrolled a {
+    margin-right: 30px;
+    color: #000 !important;
+    border-bottom: 2px solid transparent;
+}
+
+.scrolled .navbar-brand .logoW {
+  display: none;
+}
+
+.scrolled .navbar-brand .logoB {
+  display: inline;
+}
+
+
+@media only screen and (max-width: 1175px) {
+  .navbar-brand {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  #navbarNav {
+    margin-left: 5px !important;
+  }
+}
+
+@media only screen and (max-width: 1031px) {
+  .mrt {
+    margin-right: 5px !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .mrt a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .trn {
+    background: black !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .navbar {
+    margin-top: 0px !important;
+  }
+}
+
+
+/* Slider Section */
+.bd-example {
+  margin-top: -115px;
+}
+
+.carousel-item img{
+  height: 1080px !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center !important;
+  position: relative;
+}
+
+.carousel-item img {
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.drk:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.5;
+}
+
+.carousel-caption {
+  margin-bottom: 10rem !important;
+}
+
+.carousel-caption h5{
+  font-size: 60px;
+  text-transform: capitalize;
+}
+
+.carousel-caption p{
+  font-size: 20px;
+}
+
+.carousel-caption h1 {
+  text-transform: uppercase;
+  font-size: 7vw;
+  color: #fcd307;
+  line-height: 0.9;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
+.strokeme {
+  font-size: 13vw;
+  display: block;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fcd307;
+}
+
+.carousel-caption h2 {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #fcd307;
+  line-height: 1.2;
+  letter-spacing: 10px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.carousel-caption h2:before, .carousel-caption h2:after {
+  position: absolute;
+  content: "";
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  width: 8px;
+  height: 8px;
+  background: #fcd307;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.carousel-caption h2:after {
+  left: -15px;
+}
+
+
+.carousel-caption h2:before {
+  right: -10px;
+}
+
+@media only screen and (max-width: 991px) {
+  .carousel-caption h1 {
+    font-size: 60px;
+  }
+  .bd-example {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .bd-example {
+    margin-top: -40px;
+  }
+}
+
+
+/* INTRO */
+
+.intro {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.intro h6 {
+  font-size: 18px;
+  color: #fcd307;
+  line-height: 1.2;
+  letter-spacing: 6px;
+}
+
+.intro h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.intro h2 span {
+  color: #fcd307;
+  display: block;
+}
+
+.intro p {
+  margin-bottom: 20px;
+}
+
+.intro img {
+  width: 100%;
+}
+
+.btn-warning {
+  background-color: #fcd307;
+  background: #fcd307;
+  color: #000 !important;
+  border-radius: 50px;
+  padding: 10px 25px !important;
+  box-shadow: 3px 3px 5px #333;
+  width: 160px;
+  text-align: center;
+}
+
+.btn-warning:hover {
+  background: #fff;
+  box-shadow: none;
+}
+
+
+/* Best Training */
+
+.bestTr {
+  background-color: #fafafa;
+}
+
+.bestTr h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.bestTr span {
+  color: #fcd307;
+}
+
+
+/* Footer */
+
+.footerATLAS {
+  background-color: #1a1717;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.footerATLAS h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-style: italic;
+  margin-bottom: 40px;
+
+  letter-spacing: 1px;
+}
+
+.footerATLAS p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Copyright */
+
+.footer {
+  .background-color: #fcd307;
+  font-size: 15px;
+}
