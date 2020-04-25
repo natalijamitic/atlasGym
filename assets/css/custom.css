@@ -1,22 +1,38 @@
+html,body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 body {
   background-color: white;
 }
 
 .blck {
   background: rgba(0,0,0,0.4) !important;
-  z-index: 99;
+  z-index: 150;
 }
+
 
 @media only screen and (max-width: 991px) {
   .blck {
-    visibility: hidden;
+    display: none;
   }
 }
 
+@media only screen and (min-width: 991px) {
+  .lang {
+    display: none;
+  }
+}
+
+
 /* Navbar Decoration */
 
-.mynav {
+.navbar {
   background: #fff !important;
+  margin-top: 0px !important;
 }
 
 .navbar-brand {
@@ -25,7 +41,7 @@ body {
 }
 
 .navbar-brand img {
-  width: 200px;
+  width: 120px;
 }
 
 .navbar-brand .logoB {
@@ -35,39 +51,20 @@ body {
   display: inline;
 }
 
-.mynav a {
-    margin-right: 30px;
-    color: #181174 !important;
-    border-bottom: 2px solid transparent;
+.flag {
+  margin-right: 0 !important;
+  margin-left: 0;
+  width: 20px;
+  height: 12px;
+  opacity: 1;
 }
-
-.mynav a:hover {
-  border-bottom: 2px solid #181174;
-}
-
-.active a {
-    border-bottom: 2px solid #181174;
-}
-
-.mrt a {
-  background: #181174;
-  color: #fff !important;
-  border-radius: 50px;
-  padding: 10px 25px !important;
-  box-shadow: 3px 3px 5px #777;
-  width: 120px;
-  text-align: center;
-}
-
-.mrt a:hover {
-  background: #f73562;
-  box-shadow: none;
+.activeFlag img {
+  border: 2px solid #fcd307;
 }
 
 .navbar-brand:hover {
   border-bottom: 2px solid transparent !important;
 }
-
 
 .trn {
   background: transparent !important;
@@ -94,11 +91,13 @@ body {
 }
 
 .mrt a {
+  margin-top: 5px;
   background: #fcd307;
   color: #000 !important;
   border-radius: 50px;
-  padding: 10px 25px !important;
+  padding: 8px 25px !important;
   box-shadow: 3px 3px 5px #333;
+  height: 40px;
   width: 160px;
   text-align: center;
 }
@@ -164,6 +163,13 @@ body {
   .navbar {
     margin-top: 0px !important;
   }
+
+  .scrolled .trn {
+    background: #fff !important;
+    transition: background-color 200ms linear;
+    margin-top: 0 !important;
+    box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.4) !important;
+  }
 }
 
 
@@ -173,17 +179,18 @@ body {
 }
 
 .carousel-item img{
-  height: 1080px !important;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center !important;
   position: relative;
-}
-
-.carousel-item img {
   filter: gray;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
+
+}
+
+.carImg {
+  height: 1000px !important;
 }
 
 .drk:after {
@@ -199,7 +206,7 @@ body {
 }
 
 .carousel-caption {
-  margin-bottom: 10rem !important;
+  margin-bottom: 15rem !important;
 }
 
 .carousel-caption h5{
@@ -275,8 +282,9 @@ body {
 
 @media only screen and (max-width: 770px) {
   .bd-example {
-    margin-top: -40px;
+    margin-top: -100px;
   }
+
 }
 
 
@@ -331,6 +339,9 @@ body {
   box-shadow: none;
 }
 
+.btn-warning.view {
+  width: 120px;
+}
 
 /* Best Training */
 
@@ -350,6 +361,18 @@ body {
   color: #fcd307;
 }
 
+@media only screen and (max-width: 860px) {
+  .card-body {
+    padding: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .card-body {
+    padding: 20px !important;
+  }
+}
+
 
 /* Footer */
 
@@ -365,7 +388,6 @@ body {
   font-weight: 800;
   font-style: italic;
   margin-bottom: 40px;
-
   letter-spacing: 1px;
 }
 
@@ -376,6 +398,29 @@ body {
 /* Copyright */
 
 .footer {
-  .background-color: #fcd307;
+  background-color: #fcd307;
   font-size: 15px;
+}
+
+
+/* ADS */
+
+.ads {
+  background-color: skyblue;
+  opacity: 0.3;
+  height: 100%; 
+}
+
+.go2back {
+  z-index: -1;
+}
+
+.ads.intro {
+  margin-bottom: 200px;
+}
+
+@media only screen and (max-width: 650px) {
+  .ads {
+    display: none;
+  }
 }
