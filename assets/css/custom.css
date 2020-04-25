@@ -559,11 +559,11 @@ body {
   border-radius: 2px; 
 }
 
-#new-tab, #comments-tab {
+#new-tab, #comments-tab, #grade-tab {
   color: white;
 }
 
-#new-tab.active, #comments-tab.active {
+#new-tab.active, #comments-tab.active, #grade-tab.active {
   color: #000;
 }
 
