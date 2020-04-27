@@ -10,23 +10,36 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
 
     <link rel="stylesheet" href="../assets/css/custom.css">
 
     <title>Atlas Gym - Treninzi</title>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+
+
 
 </head>
 
@@ -90,9 +103,9 @@
                             Usluge
                         </a>
                         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item activeItem" href="#">Treninzi</a>
+                            <a class="dropdown-item" href="treninzi.html">Treninzi</a>
                             <a class="dropdown-item" href="nutricionista.html">Nutricionista</a>
-                            <a class="dropdown-item" href="masaze.html">Masaze</a>
+                            <a class="dropdown-item activeItem" href="masaze.html">Masaze</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -157,7 +170,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb breadcrumb-arrow p-0">
                     <li class="breadcrumb-item"><a href="index.html" class="text-uppercase pl-3">Pocetna</a></li>
-                    <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4">Treninzi</li>
+                    <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4">Masaze</li>
                 </ol>
             </nav>
 
@@ -168,63 +181,86 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12 text-center pt-4">
-                                        <h2>Izaberi <span>kategoriju</span></h2>
+                                        <h2>Zakazi <span>masazu</span></h2>
+                                        <br>
                                     </div>
                                 </div>
-                                <div class="row mt-5 mb-5">
-                                    <div class="col-md-6 mb-5">
-                                        <div class="card bg-dark text-white">
-                                            <img class="img-fluid" src="../assets/imgs/pic1.jpg" alt="">
-                                            <div class="card-body">
-                                                <h5 class="card-title">
-                                                    Joga
-                                                </h5>
-                                                <div class="text-center">
-                                                    <a href="treninzi-grupno.html" class="btn btn-warning view">Pogledaj</a>
-                                                </div>
-                                            </div>
+
+                                <form>
+                                    <div class="form-group row">
+                                        <label for="inputName" class="col-sm-2 col-form-label">Ime</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputName" placeholder="Ime">
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-5">
-                                        <div class="card bg-dark text-white">
-                                            <img class="img-fluid" src="../assets/imgs/pic2.jpg" alt="">
-                                            <div class="card-body">
-                                                <h5 class="card-title">
-                                                    Pilates
-                                                </h5>
-                                                <div class="text-center">
-                                                    <a href="#" class="btn btn-warning view">Pogledaj</a>
-                                                </div>
-                                            </div>
+
+                                    <div class="form-group row">
+                                        <label for="inputLastName" class="col-sm-2 col-form-label">Prezime</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputLastName"
+                                                placeholder="Prezime">
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-5">
-                                        <div class="card bg-dark text-white">
-                                            <img class="img-fluid" src="../assets/imgs/woman.jpg" alt="">
-                                            <div class="card-body">
-                                                <h5 class="card-title">
-                                                    Core
-                                                </h5>
-                                                <div class="text-center">
-                                                    <a href="#" class="btn btn-warning view">Pogledaj</a>
-                                                </div>
-                                            </div>
+
+                                    <div class="form-group row">
+                                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail"
+                                                placeholder="Email">
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-5">
-                                        <div class="card bg-dark text-white">
-                                            <img class="img-fluid" src="../assets/imgs/pic2.jpg" alt="">
-                                            <div class="card-body">
-                                                <h5 class="card-title">
-                                                    Kardio
-                                                </h5>
-                                                <div class="text-center">
-                                                    <a href="#" class="btn btn-warning view">Pogledaj</a>
-                                                </div>
-                                            </div>
+
+
+                                    <div class="form-group row">
+                                        <label for="inputPhone" class="col-sm-2 col-form-label">Telefon</label>
+                                        <div class="col-sm-10">
+                                            <input type="tel" class="form-control" id="inputPhone"
+                                                placeholder="Telefon">
                                         </div>
                                     </div>
-                                </div>
+
+                                    <div class="form-group row">
+                                        <label for="inputDate" class="col-sm-2 col-form-label">Datum</label>
+                                        <div class="col-sm-10">
+                                            <div class="datepicker date input-group p-0 shadow-sm">
+                                                <input type="text" placeholder="Izaberite datum" class="form-control" id="inputDate">
+                                                <div class="input-group-append"></div>
+                                            </div>
+                                        </div>
+                                        <!--
+                                            <div class="col-sm-10">
+                                                <input type="date" class="form-control" id="inputDate"
+                                                placeholder="Datum">
+                                            </div>
+                                        -->
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-2"><label for="inputText">Poruka</label></div>
+                                        <div class="col-sm-10 mb-2">
+                                            <textarea class="form-control" id="inputText"
+                                            rows="3" placeholder="Opis problema i druge napomene"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row text-center">
+                                        <div class="col-sm-12">
+                                            
+                                            <div class="offset-sm-10 col-sm-2">
+                                                <div class="form-check checkbox-warning checkbox mt-0">
+                                                    <input class="form-check-input" type="checkbox" id="checkPDF">
+                                                    <label class="form-check-label" for="checkPDF">
+                                                        Zelim PDF
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-warning book">Zakazi</button>
+                                        </div>
+                                        
+                                    </div>
+                                </form>
+
                             </div>
                         </div>
                     </div>
