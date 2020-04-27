@@ -36,7 +36,7 @@
 
     <link rel="stylesheet" href="../assets/css/custom.css">
 
-    <title>Atlas Gym - Masaze</title>
+    <title>Atlas Gym - Zakazi Trening</title>
 
 
 
@@ -98,14 +98,14 @@
                         <a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link activeItem  dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Usluge
                         </a>
                         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="treninzi.html">Treninzi</a>
                             <a class="dropdown-item" href="nutricionista.html">Nutricionista</a>
-                            <a class="dropdown-item activeItem" href="masaze.html">Masaze</a>
+                            <a class="dropdown-item" href="masaze.html">Masaze</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -114,7 +114,7 @@
                 </ul>
                 <div class="ml-auto mr-5">
                     <ul class="navbar-nav">
-                        <li class="mrt nav-item">
+                        <li class="mrt nav-item activeButton">
                             <a class="nav-link" href="zakazi-trening.html">Zakazi Trening</a>
                         </li>
                         <li class="mrt nav-item">
@@ -170,7 +170,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb breadcrumb-arrow p-0">
                     <li class="breadcrumb-item"><a href="index.html" class="text-uppercase pl-3">Pocetna</a></li>
-                    <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4">Masaze</li>
+                    <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4">Zakazi Trening</li>
                 </ol>
             </nav>
 
@@ -180,86 +180,124 @@
                         <div class="col-12 bestTr pt-5 pb-5">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-12 text-center pt-4">
-                                        <h2>Zakazi <span>masazu</span></h2>
+                                    <div class="col-12 text-center pt-4 mb-4">
+                                        <h2>Zakazi <span>trening</span></h2>
                                         <br>
                                     </div>
-                                </div>
+                                
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-sm-2 text-center mb-5">
+                                                <h5 class="">Filtriraj po tipu:</h5>
+                                                <div class="form-check checkbox-warning checkbox mt-0 pl-0">
+                                                    <input class="form-check-input" type="checkbox" id="checkYoga">
+                                                    <label class="form-check-label" for="checkYoga">
+                                                        <div class="ml-4">Joga</div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check checkbox-warning checkbox mt-0 pl-0">
+                                                    <input class="form-check-input" type="checkbox" id="checkPilates">
+                                                    <label class="form-check-label" for="checkPilates">
+                                                        <div class="ml-4">Pilates</div>
+                                                    </label>
+                                                </div>
 
-                                <form>
-                                    <div class="form-group row">
-                                        <label for="inputName" class="col-sm-2 col-form-label">Ime</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="inputName" placeholder="Ime">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="inputLastName" class="col-sm-2 col-form-label">Prezime</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="inputLastName"
-                                                placeholder="Prezime">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                                        <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail"
-                                                placeholder="Email">
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-group row">
-                                        <label for="inputPhone" class="col-sm-2 col-form-label">Telefon</label>
-                                        <div class="col-sm-10">
-                                            <input type="tel" class="form-control" id="inputPhone"
-                                                placeholder="Telefon">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="inputDate" class="col-sm-2 col-form-label">Datum</label>
-                                        <div class="col-sm-10">
-                                            <div class="datepicker date input-group p-0 shadow-sm">
-                                                <input type="text" placeholder="Izaberite datum" class="form-control" id="inputDate">
-                                                <div class="input-group-append"></div>
-                                            </div>
-                                        </div>
-                                        <!--
-                                            <div class="col-sm-10">
-                                                <input type="date" class="form-control" id="inputDate"
-                                                placeholder="Datum">
-                                            </div>
-                                        -->
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <div class="col-sm-2"><label for="inputText">Poruka</label></div>
-                                        <div class="col-sm-10 mb-2">
-                                            <textarea class="form-control" id="inputText"
-                                            rows="3" placeholder="Opis problema i druge napomene"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row text-center">
-                                        <div class="col-md-12">
-                                            
-                                            <div class="offset-md-10 col-md-2 offset-sm-3 col-sm-6">
-                                                <div class="form-check checkbox-warning checkbox mt-0">
-                                                    <input class="form-check-input" type="checkbox" id="checkPDF">
-                                                    <label class="form-check-label" for="checkPDF">
-                                                        <div class="ml-4">Zelim PDF</div>
+                                                <div class="form-check checkbox-warning checkbox mt-0 pl-0">
+                                                    <input class="form-check-input" type="checkbox" id="checkCore">
+                                                    <label class="form-check-label" for="checkCore">
+                                                        <div class="ml-4">Core</div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check checkbox-warning checkbox mt-0 pl-0">
+                                                    <input class="form-check-input" type="checkbox" id="checkCardio">
+                                                    <label class="form-check-label" for="checkCardio">
+                                                        <div class="ml-4">Kardio</div>
                                                     </label>
                                                 </div>
                                             </div>
-
-                                            <button type="submit" class="btn btn-warning book">Zakazi</button>
+                                            <div class="col-sm-10">
+                                                <div class="row mb-5 ml-4">
+                                                    <div class="col-lg-4 col-md-6 mb-5">
+                                                        <div class="card bg-dark text-white">
+                                                            <img class="img-fluid" src="../assets/imgs/pic1.jpg" alt="">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">
+                                                                    Joga Starter
+                                                                </h5>
+                                                                <p>Trajanje: 30min</p>
+                                                                <p>Tezina: 2</p>
+                                                                <div class="text-center">
+                                                                    <a href="zakazi-trening-pojedinacno.html" class="btn btn-warning view">Zakazi</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 mb-5">
+                                                        <div class="card bg-dark text-white">
+                                                            <img class="img-fluid" src="../assets/imgs/woman.jpg" alt="">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">
+                                                                    Joga Ocajna Domacica
+                                                                </h5>
+                                                                <p>Trajanje: 42min</p>
+                                                                <p>Tezina: 4</p>
+                                                                <div class="text-center">
+                                                                    <a href="#" class="btn btn-warning view">Zakazi</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 mb-5">
+                                                        <div class="card bg-dark text-white">
+                                                            <img class="img-fluid" src="../assets/imgs/pic2.jpg" alt="">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">
+                                                                    Joga Guru
+                                                                </h5>
+                                                                <p>Trajanje: 60min</p>
+                                                                <p>Tezina: 5</p>
+                                                                <div class="text-center">
+                                                                    <a href="#" class="btn btn-warning view">Zakazi</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 mb-5">
+                                                        <div class="card bg-dark text-white">
+                                                            <img class="img-fluid" src="../assets/imgs/pic1.jpg" alt="">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">
+                                                                    Joga Starter
+                                                                </h5>
+                                                                <p>Trajanje: 30min</p>
+                                                                <p>Tezina: 2</p>
+                                                                <div class="text-center">
+                                                                    <a href="#" class="btn btn-warning view">Zakazi</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 mb-5">
+                                                        <div class="card bg-dark text-white">
+                                                            <img class="img-fluid" src="../assets/imgs/pic1.jpg" alt="">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">
+                                                                    Joga Starter
+                                                                </h5>
+                                                                <p>Trajanje: 30min</p>
+                                                                <p>Tezina: 2</p>
+                                                                <div class="text-center">
+                                                                    <a href="#" class="btn btn-warning view">Zakazi</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        
+
                                     </div>
-                                </form>
+                                </div>
 
                             </div>
                         </div>

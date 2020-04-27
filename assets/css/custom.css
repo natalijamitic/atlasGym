@@ -51,7 +51,7 @@ body {
   display: inline;
 }
 
-.dropdown:hover .dropdown-menu {
+.nav-item.dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0px !important;
 
@@ -146,6 +146,11 @@ body {
 
 .scrolled .activeItem {
   border-bottom: 2px solid #fcd307;
+}
+
+.activeButton a{
+  background-color: black !important;
+  color: #fcd307 !important;
 }
 
 .scrolled .dropdown-menu {
@@ -548,6 +553,10 @@ body {
 
 .bootstrap-select .dropdown-item .text {
   color: black !important;
+}
+
+.dropdown-item.active.selected {
+  background: #fcd307;
 }
 
 
