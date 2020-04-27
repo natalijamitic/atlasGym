@@ -51,6 +51,12 @@ body {
   display: inline;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0px !important;
+
+}
+
 .flag {
   margin-right: 0 !important;
   margin-left: 0;
@@ -124,6 +130,10 @@ body {
     margin-right: 30px;
     color: #000 !important;
     border-bottom: 2px solid transparent;
+}
+
+.scrolled a:hover {
+  border-bottom: 2px solid #fcd307;
 }
 
 .scrolled .navbar-brand .logoW {
