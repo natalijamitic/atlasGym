@@ -571,10 +571,13 @@ body {
 
 #new-tab, #comments-tab, #grade-tab {
   color: white;
+ 
 }
 
 #new-tab.active, #comments-tab.active, #grade-tab.active {
   color: #000;
+  background-color: #fcd307;
+  border-color: #d5b30a;
 }
 
 h4 .progress {
@@ -649,6 +652,14 @@ h4 .progress .progress-value {
 .progress-bar.bg-warning.text-dark {
   font-weight: 700;
 }
+
+/*
+.progress .progress-bar:hover {
+  font-size: 1rem;
+  background: black !important;
+  color: #fcd307 !important;
+}
+*/
 
 /* DATEPICKER */
 .datepicker td, .datepicker th {
