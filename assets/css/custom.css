@@ -734,3 +734,32 @@ content: '';
 .checkbox input[type="checkbox"]:focus + label::before {
   outline: 0;
 }
+
+
+/* ABOUT */
+
+.social .fab{
+  font-size: 18px;
+  padding: 3px;
+  padding-top: 0px !important;
+}
+
+.social .fab:hover {
+  color: white;
+}
+
+.team-member .subheading {
+  color: #fcd307;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.img-member {
+  width: 100%;
+  background-position: top center !important;
+  position: relative;
+
+  border-left: 10px solid #fcd307;
+}
