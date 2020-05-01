@@ -209,16 +209,25 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center !important;
-  position: relative;
+ 
   filter: gray;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
-
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;  
+  max-width: none;
+  height: auto;
 }
 
-.carImg {
-  height: 1000px !important;
+.carousel-inner {
+  height: auto;
 }
+
+/* .carImg {
+  height: 100% !important;
+} */
 
 .drk:after {
   content: "";
@@ -307,13 +316,19 @@ body {
   }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 242px) {
   .bd-example {
-    margin-top: -100px;
+    margin-top: 70px;
   }
 
 }
 
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: 22px !important;
+  }
+
+}
 
 /* INTRO */
 
@@ -459,7 +474,7 @@ body {
 }
 
 .breadcrumb-arrow {
-  height: 40px;
+  /* height: 40px; */
   line-height: 40px;
 }
 
@@ -539,7 +554,27 @@ body {
   border-left-color: #000;
 }
 
+.activeBreadcrumb {
+  margin-top: 0px !important;
+}
 
+
+@media only screen and (max-width: 450px) {
+  .breadcrumb{
+    font-size: 14px;
+  }
+
+  .breadcrumb a {
+    padding-left: 15px !important;
+    padding-right: 5px !important;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .breadcrumb{
+    font-size: 12px;
+  }
+}
 
 /* Sort */
 .dropdown-toggle.btn-warning {
@@ -796,4 +831,23 @@ content: '';
 
 .modal-content {
   color: #343a40;
+}
+
+
+
+/* ZAKAZI */
+
+@media only screen and (max-width: 400px) {
+  .btn-warning.view.zak {
+    width: 100px;
+    margin-left: -5px;
+  }
+
+  .modal {
+    font-size: 12px;
+  }
+
+  .dropdown.bootstrap-select {
+    width: 150px !important;
+  }
 }
