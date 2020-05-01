@@ -838,7 +838,7 @@ content: '';
 /* ZAKAZI */
 
 @media only screen and (max-width: 400px) {
-  .btn-warning.view.zak {
+  .btn-warning.view.zak, .btn-outline-warning.trening {
     width: 100px;
     margin-left: -5px;
   }
@@ -850,4 +850,13 @@ content: '';
   .dropdown.bootstrap-select {
     width: 150px !important;
   }
+}
+
+
+/* NALOG */
+
+.btn-outline-warning.trening {
+  pointer-events: none;
+  border-color: #fcd307;
+  color: #fcd307;
 }
