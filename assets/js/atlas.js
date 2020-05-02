@@ -4,13 +4,14 @@ var lang = 0; //0-serbian 1-english
 function makePDF(type) {
 
     let text = [
-                ["Uspesno ste rezervisali termin za", ", \tdana   ", "Podaci:",  "puno ime:",
-                 "poruka:", "Vidimo se na nasoj lokaciji Bregovita 11, 11080 Zemun!",
-                 "Vas Atlas Tim", "Masaza.pdf", "Nutricionista.pdf"],
+                ["Uspešno ste rezervisali termin za", ", \tdana   ", "Podaci:",  "puno ime:",
+                 "poruka:", "Vidimo se na našoj lokaciji Bregovita 11, 11080 Zemun!",
+                 "Vaš Atlas Tim"],
                 ["You have successfully booked", ", \ton   ", "Personal info:",  "full name:",
                  "message:", "See you at our location at Bregovita 11, 11080 Zemun!",
-                 "Your Atlas Team", "Massage.pdf", "Nutritionist.pdf"] 
+                 "Your Atlas Team"] 
                 ]
+
     let i = 0;
     let doc = new jsPDF()
     let pageWidth = 210;
@@ -18,7 +19,7 @@ function makePDF(type) {
 
     doc.text(pageWidth / 2, 40, text[lang][i++], { align: "center" })
     doc.setFontStyle("bold")
-    doc.text(pageWidth / 2, 50, type + text[lang][i++] + $("#inputDate").val(), { align: "center" })
+    doc.text(pageWidth / 2, 50, (lang == 1 ? "a " : "") + (type == "masazu" ? "masažu" : type) + text[lang][i++] + $("#inputDate").val(), { align: "center" })
 
     doc.setFontStyle("normal")
     doc.text(20, 80, text[lang][i++])
@@ -51,9 +52,13 @@ function makePDF(type) {
     doc.rect(15, 20, pageWidth-30, pageHeight-40)
 
     if (type == "masazu")
-        doc.save(text[lang][i++]);
+        doc.save("Masaza.pdf");
+    else if (type == "nutricionista")
+        doc.save("Nutricionista.pdf")
+    else if (type == "massage")
+        doc.save("Massage.pdf")
     else
-        doc.save(text[lang][i++])
+        doc.save("Nutritionist.pdf")
 }
 
 function resetInput() {
