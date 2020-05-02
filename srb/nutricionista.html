@@ -38,6 +38,11 @@
 
 
     <link rel="stylesheet" href="../assets/css/custom.css">
+    <script src="../assets/js/atlas.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous"></script>
 
     <title>Atlas Gym - Nutricionista</title>
 
@@ -48,7 +53,8 @@
             // INITIALIZE DATEPICKER PLUGIN
             $('.datepicker').datepicker({
                 clearBtn: true,
-                format: "dd/mm/yyyy"
+                format: "dd/mm/yyyy",
+                startDate: new Date()
             });
 
         });
@@ -262,6 +268,7 @@
                                             
                                             <div class="offset-md-10 col-md-2 offset-sm-3 col-sm-6">
                                                 <div class="form-check checkbox-warning checkbox mt-0">
+                                                    <input type="hidden" id="typeId" name="typeId" value="nutricionistu">
                                                     <input class="form-check-input" type="checkbox" id="checkPDF">
                                                     <label class="form-check-label" for="checkPDF">
                                                         <div class="ml-4">Zelim PDF</div>
@@ -269,7 +276,7 @@
                                                 </div>
                                             </div>
 
-                                            <button type="submit" class="btn btn-warning book">Zakazi</button>
+                                            <button type="submit" class="btn btn-warning book" onclick="book()">Zakazi</button>
                                         </div>
                                         
                                     </div>
