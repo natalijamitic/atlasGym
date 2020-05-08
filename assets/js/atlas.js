@@ -279,7 +279,13 @@ function book() {
             return;
         }
 
-        patternEmail = "IMPLEMENTIRATI"
+        patternEmail = /^[a-zA-Z]\w*@[a-zA-Z]\w*([-\.]\w+)*(\.[a-zA-Z]{2,3})+$/g
+
+        if (!email.match(patternEmail)) {
+            alert("Nevalidan unos email adrese.")
+            resetInput();
+            return;
+        }
 
         patternPhone = /^(\d){3}(\ )?(\d){3}(\ )?(\d){3,4}$/g
         if (!phone.match(patternPhone)) {
