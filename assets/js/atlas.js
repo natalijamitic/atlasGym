@@ -295,9 +295,6 @@ function book() {
             return;
         }
 
-        patternDate = "IMPLEMENTIRATI"
-
-
         makePDF(type);
         alert("Uspesno zakazano. IMA PDFA");        //za test
     }

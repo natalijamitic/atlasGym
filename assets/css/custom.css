@@ -767,6 +767,9 @@ h4 .progress .progress-value {
   font-size: 1rem;
 }
 
+#inputDate {
+  background-color: white;
+}
 
 
 /* CHECKBOX PDF */
