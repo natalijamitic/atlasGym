@@ -30,7 +30,16 @@
 
     <title>Atlas Gym - Treninzi</title>
 
-    
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/atlas.js"></script>
+
+    <script>
+        document.onreadystatechange = function (e) {
+            if (document.readyState === 'complete') {
+                populateGroupTraining();
+            }
+        };
+    </script>
 
 
 </head>
@@ -163,7 +172,7 @@
                 <ol class="breadcrumb breadcrumb-arrow p-0">
                     <li class="breadcrumb-item"><a href="index.html" class="text-uppercase pl-3">Pocetna</a></li>
                     <li class="breadcrumb-item pl-0"><a href="treninzi.html" class="text-uppercase">Treninzi</a></li>
-                    <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4">Joga</li>
+                    <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4 card-type"></li>
                 </ol>
             </nav>
 
@@ -177,10 +186,10 @@
                                         <h2>Izaberi <span>trening</span></h2>
                                         <br>
 
-                                        <select class="selectpicker" data-style="btn-warning" title="Sortiraj po...">
-                                            <option>Nazivu</option>
-                                            <option>Trajanju</option>
-                                            <option>Tezini</option>
+                                        <select id="selectSort" class="selectpicker" data-style="btn-warning" title="Sortiraj po...">
+                                            <option value="1">Nazivu</option>
+                                            <option value="2">Trajanju</option>
+                                            <option value="3">Tezini</option>
                                         </select>
                                           
                                     </div>
@@ -188,45 +197,45 @@
                                 <div class="row mt-5 mb-5">
                                     <div class="col-md-4 mb-5">
                                         <div class="card bg-dark text-white">
-                                            <img class="img-fluid" src="../assets/imgs/pic1.jpg" alt="">
+                                            <img class="img-fluid card-img" src="" alt="">
                                             <div class="card-body">
                                                 <h5 class="card-title">
-                                                    Joga Starter
+                                                    
                                                 </h5>
-                                                <p>Trajanje: 30min</p>
-                                                <p>Tezina: 2</p>
+                                                <p>Trajanje: <span class="card-duration"></span></p>
+                                                <p>Tezina: <span class="card-level"></span></p>
                                                 <div class="text-center">
-                                                    <a href="treninzi-pojedinacno.html" class="btn btn-warning view">Pogledaj</a>
+                                                    <a href="" class="btn btn-warning view card-link">Pogledaj</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 mb-5">
                                         <div class="card bg-dark text-white">
-                                            <img class="img-fluid" src="../assets/imgs/woman.jpg" alt="">
+                                            <img class="img-fluid card-img" src="" alt="">
                                             <div class="card-body">
                                                 <h5 class="card-title">
-                                                    Joga Ocajna Domacica
+                                                    
                                                 </h5>
-                                                <p>Trajanje: 42min</p>
-                                                <p>Tezina: 4</p>
+                                                <p>Trajanje: <span class="card-duration"></span></p>
+                                                <p>Tezina: <span class="card-level"></span></p>
                                                 <div class="text-center">
-                                                    <a href="#" class="btn btn-warning view">Pogledaj</a>
+                                                    <a href="" class="btn btn-warning view card-link">Pogledaj</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 mb-5">
                                         <div class="card bg-dark text-white">
-                                            <img class="img-fluid" src="../assets/imgs/pic2.jpg" alt="">
+                                            <img class="img-fluid card-img" src="" alt="">
                                             <div class="card-body">
                                                 <h5 class="card-title">
-                                                    Joga Guru
+                                                    
                                                 </h5>
-                                                <p>Trajanje: 60min</p>
-                                                <p>Tezina: 5</p>
+                                                <p>Trajanje: <span class="card-duration"></span></p>
+                                                <p>Tezina: <span class="card-level"></span></p>
                                                 <div class="text-center">
-                                                    <a href="#" class="btn btn-warning view">Pogledaj</a>
+                                                    <a href="" class="btn btn-warning view card-link">Pogledaj</a>
                                                 </div>
                                             </div>
                                         </div>

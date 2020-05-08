@@ -399,6 +399,10 @@ body {
   color: #fcd307;
 }
 
+.card-img {
+  max-height: 186px;
+}
+
 @media only screen and (max-width: 860px) {
   .card-body {
     padding: 10px !important;
@@ -597,11 +601,52 @@ body {
 
 /* SINGLE TR */
 
+/******************************************************/
+/* GALLERY */
+
+#gallery img {
+  height: 75vw;
+  object-fit: cover;
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+#gallery img:hover {
+  opacity: 0.5;
+}
+@media (min-width: 576px) {
+  #gallery img {
+    height: 35vw;
+ }
+}
+@media (min-width: 992px) {
+  #gallery img {
+    height: 18vw;
+ }
+}
+#modalGallery img {
+  filter: none;
+  -webkit-filter: none;
+  height: 60vw;
+  object-fit: cover;
+}
+@media (min-width: 576px) {
+  #modalGallery img {
+    height: 350px;
+ }
+}
+* {
+  transition: 0.3s;
+}
+
+
+/******************************************************/
+
 .bestTr.singleTr {
   color: white;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .carousel-multi-item-2 .col-md-3 {
     float: left;
     width: 25%;
@@ -611,7 +656,7 @@ body {
   
 .carousel-multi-item-2 .card img {
   border-radius: 2px; 
-}
+} */
 
 #new-tab, #comments-tab, #grade-tab {
   color: white;
@@ -859,4 +904,10 @@ content: '';
   pointer-events: none;
   border-color: #fcd307;
   color: #fcd307;
+}
+
+
+
+span.noColor {
+  color: white;
 }
