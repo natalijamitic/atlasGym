@@ -885,6 +885,12 @@ content: '';
 
 /* ZAKAZI */
 
+@media only screen and (max-width: 1060px) {
+  .btn-warning.view.zak, .btn-outline-warning.trening {
+    width: 100px;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .btn-warning.view.zak, .btn-outline-warning.trening {
     width: 100px;
