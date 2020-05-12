@@ -430,7 +430,7 @@ h2.inline {
   width: 100%;
 }
 
-.btn-warning.view, .btn-warning.book {
+.btn-warning.view, .btn-warning.book, .btn-warning.viewMax {
   background-color: #fcd307;
   background: #fcd307;
   color: #000 !important;
@@ -441,12 +441,19 @@ h2.inline {
   text-align: center;
 }
 
-.btn-warning.view:hover, .btn-warning.book:hover {
+.btn-warning.viewMax {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.btn-warning.view:hover, .btn-warning.book:hover, .btn-warning.viewMax:hover {
   background: #fff;
   box-shadow: none;
 }
 
 /* Best Training */
+
 
 .bestTr {
   background-color: #fafafa;
