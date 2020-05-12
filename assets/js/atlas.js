@@ -15,7 +15,7 @@ function compare(a, b) {
 }
 
 function populateIndex() {
-    
+
     let sortWorkouts = workouts;
     sortWorkouts.sort(compare);
 
@@ -37,19 +37,19 @@ function populateIndex() {
 /*********** TRAINING ************/
 let workout;
 function populateTraining() {
-    id = getParameterByName('id')-1;
+    id = getParameterByName('id') - 1;
     workout = workouts[id];
     writeTraining(id);
 }
 
 function writeTraining(id) {
     document.getElementsByClassName("card-fullName")[0].innerText = getTypeName(workout.category) + " " + workout.name;
-    document.getElementsByClassName("card-link")[0].href = "treninzi-grupno.html?tip="+workout.category;
+    document.getElementsByClassName("card-link")[0].href = "treninzi-grupno.html?tip=" + workout.category;
     document.getElementsByClassName("card-name")[0].innerText = workout.name;
     document.getElementsByClassName("card-type")[0].innerText = getTypeName(workout.category);
     document.getElementsByClassName("card-type")[1].innerText = getTypeName(workout.category) + "\t";
     document.getElementsByClassName("card-description")[0].innerText = workout.description[lang];
-    
+
     document.getElementsByClassName("card-duration")[0].innerText = workout.duration;
     document.getElementsByClassName("card-duration-percent")[0].dataset.value = workout.duration / 60 * 100;
 
@@ -57,7 +57,7 @@ function writeTraining(id) {
     document.getElementsByClassName("card-level")[0].style.width = (workout.level * 100 / 5) + "%";
     document.getElementsByClassName("card-level")[0].ariaValueNow = workout.level;
 
-    let roundedGrade = Math.round(workout.gradesSum / workout.gradesCnt * 10 * 10)/10;
+    let roundedGrade = Math.round(workout.gradesSum / workout.gradesCnt * 10 * 10) / 10;
     document.getElementsByClassName("card-grade")[0].innerText = roundedGrade + "/10";
     document.getElementsByClassName("card-grade")[0].style.width = roundedGrade * 10 + "%";
     document.getElementsByClassName("card-grade")[0].ariaValueNow = roundedGrade
@@ -80,6 +80,24 @@ function writeTraining(id) {
     let modalImgs = document.getElementsByClassName("modalImgs");
     for (let i = 0; i < imgs.length; i++) {
         imgs[i].src = modalImgs[i].src = workout.imgs[i];
+    }
+
+    writeComments(id);
+}
+
+function writeComments(id) {
+    for (i = 0; i < workout.comments.length; i++) {
+        div = $(`<div class="row">
+                    <div class="col-md-12 text-light">
+                        <strong>${workout.comments[i].name}</strong>
+                        <p>
+                        <div class="10">${workout.comments[i].text}</div>
+                        </p>
+                    </div>
+                </div>
+                <hr />`);
+
+       $("#commentsList").append(div);
     }
 }
 
@@ -107,7 +125,7 @@ function getTypeName(name = null) {
 }
 
 function getParameterByName(name, url) {
-    if (!url) 
+    if (!url)
         url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
     let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -144,28 +162,28 @@ function populateGroupTraining() {
 }
 
 function sortAlpha(a, b) {
-    if(a.name < b.name)
+    if (a.name < b.name)
         return -1;
     else if (a.name > b.name)
         return 1;
     return 0;
 }
 function sortTime(a, b) {
-    if(a.duration < b.duration)
+    if (a.duration < b.duration)
         return -1;
     else if (a.duration > b.duration)
         return 1;
     return 0;
 }
 function sortLevel(a, b) {
-    if(a.level < b.level)
+    if (a.level < b.level)
         return -1;
     else if (a.level > b.level)
         return 1;
     return 0;
 }
 
-$(document).on('change', 'select', function() {
+$(document).on('change', 'select', function () {
     let option = $(this).val()
     console.log(option)
     let sortedWorkouts = groupWorkouts;
@@ -196,13 +214,13 @@ $(document).on('change', 'select', function() {
 function makePDF(type) {
 
     let text = [
-                ["Uspešno ste rezervisali termin za", ", \tdana   ", "Podaci:",  "puno ime:",
-                 "poruka:", "Vidimo se na našoj lokaciji Bregovita 11, 11080 Zemun!",
-                 "Vaš Atlas Tim"],
-                ["You have successfully booked", ", \ton   ", "Personal info:",  "full name:",
-                 "message:", "See you at our location at Bregovita 11, 11080 Zemun!",
-                 "Your Atlas Team"] 
-                ]
+        ["Uspešno ste rezervisali termin za", ", \tdana   ", "Podaci:", "puno ime:",
+            "poruka:", "Vidimo se na našoj lokaciji Bregovita 11, 11080 Zemun!",
+            "Vaš Atlas Tim"],
+        ["You have successfully booked", ", \ton   ", "Personal info:", "full name:",
+            "message:", "See you at our location at Bregovita 11, 11080 Zemun!",
+            "Your Atlas Team"]
+    ]
 
     let i = 0;
     let doc = new jsPDF()
@@ -241,7 +259,7 @@ function makePDF(type) {
 
     doc.setFillColor(252, 211, 7);
     doc.setDrawColor(252, 211, 7);
-    doc.rect(15, 20, pageWidth-30, pageHeight-40)
+    doc.rect(15, 20, pageWidth - 30, pageHeight - 40)
 
     if (type == "masazu")
         doc.save("Masaza.pdf");
