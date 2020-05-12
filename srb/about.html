@@ -38,29 +38,33 @@
             <div class="text-center px-md-0">
                 <div class="row d-flex">
                     <div class="col-md-4">
-                        <img src="../assets/icons/phone.svg" alt="" style="width:15px;">
+                        <img src="../assets/icons/phone.svg" alt="" width="15px">
                         +381 64 321 0990
                     </div>
                     <div class="col-md-4">
-                        <i class="fab fa-telegram-plane"></i> info@atlas.com
+                        <i><a class="navIcon fab fa-telegram-plane" href="mailto:info@atlas.com"> info@atlas.com</a></i>
                     </div>
                     <div class="col-md-4">
                         <div class="row">
                             <div class="offset-md-4 col-md-1">
-                                <i class="fab fa-facebook-f"></i>
+                                <a class="navIcon" href="https://www.facebook.com/atlasgyms/"><i
+                                        class="fab fa-facebook-f"></i></a>
                             </div>
                             <div class="col-md-1">
-                                <i class="fab fa-instagram"></i>
+                                <a class="navIcon" href="https://www.instagram.com/atlasgymsoton/"><i
+                                        class="fab fa-instagram"></i></a>
                             </div>
                             <div class="col-md-1">
-                                <i class="fab fa-youtube"></i>
+                                <a class="navIcon" href="https://www.youtube.com/channel/UCMEUwmRrtLWa4dZ-2HMqIXw"><i
+                                        class="fab fa-youtube"></i></a>
                             </div>
                             <div class="offset-md-2 col-md-1">
-                                <a class="" href="#"><img class="flag" src="../assets/imgs/lang/serbia.png" alt=""></a>
+                                <a class="parentFlag" href="#"><img class="flag" src="../assets/imgs/lang/serbia.png"
+                                        alt=""></a>
                             </div>
                             <div class="col-md-1">
-                                <a href="../eng/trenizi.html"><img class="flag" src="../assets/imgs/lang/uk.png"
-                                        alt=""></a>
+                                <a class="parentFlag" href="../eng/index.html"><img class="flag"
+                                        src="../assets/imgs/lang/uk.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -76,13 +80,13 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="">
-                    <i class="fas fa-bars" style="color: #fcd307; font-size: 28px;"></i>
+                    <i class="fas fa-bars toggleNavIcon"></i>
                 </span>
             </button>
             <div class="collapse navbar-collapse ml-5" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Početna</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -92,7 +96,7 @@
                         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="treninzi.html">Treninzi</a>
                             <a class="dropdown-item" href="nutricionista.html">Nutricionista</a>
-                            <a class="dropdown-item" href="masaze.html">Masaze</a>
+                            <a class="dropdown-item" href="masaze.html">Masaže</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -102,7 +106,7 @@
                 <div class="ml-auto mr-5">
                     <ul class="navbar-nav">
                         <li class="mrt nav-item">
-                            <a class="nav-link" href="zakazi-trening.html">Zakazi Trening</a>
+                            <a class="nav-link" href="zakazi-trening.html">Zakaži Trening</a>
                         </li>
                         <li class="mrt nav-item">
                             <a class="nav-link" href="nalog.html">Moj Nalog</a>
@@ -156,7 +160,7 @@
 
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb breadcrumb-arrow p-0">
-                    <li class="breadcrumb-item"><a href="index.html" class="text-uppercase pl-3">Pocetna</a></li>
+                    <li class="breadcrumb-item"><a href="index.html" class="text-uppercase pl-3">Početna</a></li>
                     <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4">O nama</li>
                 </ol>
             </nav>
@@ -164,22 +168,31 @@
             <section>
                 <div class="container intro">
                     <div class="row">
-
-                        <div class="col-md-6 d-flex justify-content-center">
-                            <img class="img-fluid" src="../assets/imgs/pic0.jpg" alt="">
+                        <div class="col-12 text-center">
+                            <h6>Zdravo!</h6>
+                            <h2>Mi smo <span class="inline">ATLAS</span> tim</h2>
                         </div>
 
-                        <div class="col-md-6">
-                            <h6>Zdravo!</h6>
-                            <h2>Mi smo <span>ATLAS</span>tim</h2>
-                            <p class="font-weight-lighter pb-0 mb-0 mt-3">
+                        <div class="col-lg-6 justify-content-center">
+                            <img class="img-fluid" src="../assets/imgs/team/Team.jpg" alt="">
+                        </div>
 
-                                Osnovani tad i tad sa ciljem tim i tim.
-                                Brojimo tolko clanova.
-                                Osvojene razne nagrade balbla bla
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, quo.
-                                <br>
-                                &lt;-- slika tima
+                        <div class="col-lg-6">
+                            <p class="font-weight-lighter pb-0 mb-0 mt-3">
+                                Teretanu Atlas vodi stručan tim CrossFit instruktora kvalifikovanih da drže personalne
+                                treninge i daju zdravstvene savete.
+                            <p class="font-weight-lighter pb-0 mb-0 mt-3"> Treneri nastoje da stvore zajednicu kojoj je
+                                sport uživanje, a ne dosadna rutina. </p>
+                            <p class="font-weight-lighter pb-0 mb-0 mt-3">
+                                Teretana je osnovana pre 5 godina i tokom tog perioda dodeljene su joj frazne
+                                nagrade:
+                            <ul class="font-weight-lighter pb-0 mb-0 mt-0">
+                                <li><em>NajTeretana 2017</em></li>
+                                <li><em>NajTeretana 2018</em></li>
+                                <li><em>NajTeretana 2019</em></li>
+                                <li><em>GBM Udobnost i čistoća 2019</em></li>
+                                <li><em>PPX Tim trenera 2019</em></li>
+                            </ul>
                             </p>
                         </div>
 
@@ -194,19 +207,48 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12 text-center pt-4 mb-4">
-                                        <h2 class="text-light">Nasi <span>treneri</span></h2>
+                                        <h2 class="text-light">Naši <span>treneri</span></h2>
                                     </div>
                                 </div>
                                 <div class="row text-left">
 
-                                    <div class="col-sm-3 col-12">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                         <div class="bg-dark text-light font-weight-lighter mr-2 card-rounded mb-5">
                                             <img class="img-member mb-3" alt="team-photo"
-                                                src="https://images.pexels.com/photos/295821/pexels-photo-295821.jpeg?h=350&auto=compress&cs=tinysrgb">
+                                                src="../assets/imgs/team/team1.jpg">
                                             <div class="team-member pb-0 mb-0">
-                                                <h4>John Doe</h4>
-                                                <p class="subheading">Owner / Head coach</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                                <h4>Miloš Marković</h4>
+                                                <p class="subheading">Glavni trener</p>
+                                                <p class="social pt-0 mt-0 pb-2">
+                                                    <a href=""><span class="fab fa-facebook-f mr-2"></span></a>
+                                                    <a href=""><span class="fab fa-twitter mr-2"></span></a>
+                                                    <a href=""><span class="fab fa-instagram"></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                        <div class="bg-dark text-light font-weight-lighter mr-2 card-rounded mb-5">
+                                            <img class="img-member mb-3" alt="team-photo"
+                                                src="../assets/imgs/team/team2.jpg">
+                                            <div class="team-member pb-0 mb-0">
+                                                <h4>Danijela Čović</h4>
+                                                <p class="subheading">Personalni trener</p>
+                                                <p class="social pt-0 mt-0 pb-2">
+                                                    <a href=""><span class="fab fa-facebook-f mr-2"></span></a>
+                                                    <a href=""><span class="fab fa-twitter mr-2"></span></a>
+                                                    <a href=""><span class="fab fa-instagram"></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                        <div class="bg-dark text-light font-weight-lighter mr-2 card-rounded mb-5">
+                                            <img class="img-member mb-3" alt="team-photo"
+                                                src="../assets/imgs/team/team3.jpg">
+                                            <div class="team-member pb-0 mb-0">
+                                                <h4>Nenad Madić</h4>
+                                                <p class="subheading">Personalni trener</p>
                                                 <p class="social pt-0 mt-0 pb-2">
                                                     <a href="#"><span class="fab fa-facebook-f mr-2"></span></a>
                                                     <a href="#"><span class="fab fa-twitter mr-2"></span></a>
@@ -215,14 +257,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-12">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                         <div class="bg-dark text-light font-weight-lighter mr-2 card-rounded mb-5">
                                             <img class="img-member mb-3" alt="team-photo"
-                                                src="https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?h=350&auto=compress&cs=tinysrgbb">
+                                                src="../assets/imgs/team/team4.jpg">
                                             <div class="team-member pb-0 mb-0">
-                                                <h4>John Doe</h4>
-                                                <p class="subheading">Owner / Head coach</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                                <h4>Josip Čović</h4>
+                                                <p class="subheading">Personalni trener</p>
                                                 <p class="social pt-0 mt-0 pb-2">
                                                     <a href="#"><span class="fab fa-facebook-f mr-2"></span></a>
                                                     <a href="#"><span class="fab fa-twitter mr-2"></span></a>
@@ -231,14 +272,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-12">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                         <div class="bg-dark text-light font-weight-lighter mr-2 card-rounded mb-5">
                                             <img class="img-member mb-3" alt="team-photo"
-                                                src="https://images.pexels.com/photos/295821/pexels-photo-295821.jpeg?h=350&auto=compress&cs=tinysrgb">
+                                                src="../assets/imgs/team/team5.jpg">
                                             <div class="team-member pb-0 mb-0">
-                                                <h4>John Doe</h4>
-                                                <p class="subheading">Owner / Head coach</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                                <h4>Teodora Ilić</h4>
+                                                <p class="subheading">Fitnes Instruktor</p>
                                                 <p class="social pt-0 mt-0 pb-2">
                                                     <a href="#"><span class="fab fa-facebook-f mr-2"></span></a>
                                                     <a href="#"><span class="fab fa-twitter mr-2"></span></a>
@@ -247,14 +287,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-12">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                         <div class="bg-dark text-light font-weight-lighter mr-2 card-rounded mb-5">
                                             <img class="img-member mb-3" alt="team-photo"
-                                                src="https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?h=350&auto=compress&cs=tinysrgbb">
+                                                src="../assets/imgs/team/team6.jpg">
                                             <div class="team-member pb-0 mb-0">
-                                                <h4>John Doe</h4>
-                                                <p class="subheading">Owner / Head coach</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                                <h4>Dušan Maraš</h4>
+                                                <p class="subheading">Fitnes Instruktor</p>
                                                 <p class="social pt-0 mt-0 pb-2">
                                                     <a href="#"><span class="fab fa-facebook-f mr-2"></span></a>
                                                     <a href="#"><span class="fab fa-twitter mr-2"></span></a>
@@ -263,14 +302,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-12">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                         <div class="bg-dark text-light font-weight-lighter mr-2 card-rounded mb-5">
                                             <img class="img-member mb-3" alt="team-photo"
-                                                src="https://images.pexels.com/photos/295821/pexels-photo-295821.jpeg?h=350&auto=compress&cs=tinysrgb">
+                                                src="../assets/imgs/team/team7.jpg">
                                             <div class="team-member pb-0 mb-0">
-                                                <h4>John Doe</h4>
-                                                <p class="subheading">Owner / Head coach</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                                <h4>Bogdan Belić</h4>
+                                                <p class="subheading">Fitnes instruktor</p>
                                                 <p class="social pt-0 mt-0 pb-2">
                                                     <a href="#"><span class="fab fa-facebook-f mr-2"></span></a>
                                                     <a href="#"><span class="fab fa-twitter mr-2"></span></a>
@@ -279,46 +317,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-12">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                         <div class="bg-dark text-light font-weight-lighter mr-2 card-rounded mb-5">
                                             <img class="img-member mb-3" alt="team-photo"
-                                                src="https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?h=350&auto=compress&cs=tinysrgbb">
+                                                src="../assets/imgs/team/team8.jpg">
                                             <div class="team-member pb-0 mb-0">
-                                                <h4>John Doe</h4>
-                                                <p class="subheading">Owner / Head coach</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                                <p class="social pt-0 mt-0 pb-2">
-                                                    <a href="#"><span class="fab fa-facebook-f mr-2"></span></a>
-                                                    <a href="#"><span class="fab fa-twitter mr-2"></span></a>
-                                                    <a href="#"><span class="fab fa-instagram"></span></a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-12">
-                                        <div class="bg-dark text-light font-weight-lighter mr-2 card-rounded mb-5">
-                                            <img class="img-member mb-3" alt="team-photo"
-                                                src="https://images.pexels.com/photos/295821/pexels-photo-295821.jpeg?h=350&auto=compress&cs=tinysrgb">
-                                            <div class="team-member pb-0 mb-0">
-                                                <h4>John Doe</h4>
-                                                <p class="subheading">Owner / Head coach</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                                <p class="social pt-0 mt-0 pb-2">
-                                                    <a href="#"><span class="fab fa-facebook-f mr-2"></span></a>
-                                                    <a href="#"><span class="fab fa-twitter mr-2"></span></a>
-                                                    <a href="#"><span class="fab fa-instagram"></span></a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-12">
-                                        <div class="bg-dark text-light font-weight-lighter mr-2 card-rounded mb-5">
-                                            <img class="img-member mb-3" alt="team-photo"
-                                                src="https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?h=350&auto=compress&cs=tinysrgbb">
-                                            <div class="team-member pb-0 mb-0">
-                                                <h4>John Doe</h4>
-                                                <p class="subheading">Owner / Head coach</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                                <h4>Anja Rodić</h4>
+                                                <p class="subheading">Fitnes instruktor</p>
                                                 <p class="social pt-0 mt-0 pb-2">
                                                     <a href="#"><span class="fab fa-facebook-f mr-2"></span></a>
                                                     <a href="#"><span class="fab fa-twitter mr-2"></span></a>
@@ -341,12 +346,12 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center pt-4 mb-2 ">
-                                    <h2>Nasa <span>lokacija</span></h2>
+                                    <h2>Naša <span>lokacija</span></h2>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <iframe width="100%" height="450" frameborder="0" style="border:0"
+                                <iframe width="100%" height="450" frameborder="0"
                                     src="https://www.google.com/maps/embed/v1/place?q=Bregovita%2011&key=AIzaSyDgC3IPBwUmQ7a_D1BuEZg42r5gT6w-84s"
                                     allowfullscreen></iframe>
                             </div>
@@ -390,16 +395,18 @@
                     <div class="row">
                         <div class="col-md-4 mb-5">
                             <h5>O nama</h5>
-                            <p class="font-weight-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-                                nobis nihil eum, dolorem ut harum, possimus eligendi eaque cupiditate expedita.</p>
+                            <p class="mb-0">
+                                Zgodni treneri, nove sprave, čiste svlačionice. Sve je tu.
+                                <p class="text-right">A gde je Nataša?</p>
+                              </p>
                         </div>
                         <div class="offset-md-4 col-md-4">
-                            <h5>Imas pitanje?</h5>
+                            <h5>Imaš pitanje?</h5>
 
                             <p><i class="fas fa-map-marker-alt"></i> Bregovita 11, 11080 Zemun, Beograd</p>
-                            <p><img src="../assets/icons/phoneDarker.svg" alt="" style="width:15px;"> +381 64 321 0990
-                            </p>
-                            <p><i class="fab fa-telegram-plane"></i> info@atlas.com</p>
+                            <p><img src="../assets/icons/phoneDarker.svg" alt="" width="15px"> +381 64 321 0990</p>
+                            <p><i class=""><a class="footerIcon fab fa-telegram-plane" href="mailto:info@atlas.com">
+                                        info@atlas.com</i></a></p>
 
                         </div>
                     </div>
@@ -413,9 +420,9 @@
             <div class="row">
                 <div class="col-md-12 pt-2">
                     <p>
-                        &copy; 2020 Divjak Marko, Mitic Natalija
+                        &copy; 2020 Divjak Marko, Mitić Natalija
                         <br>
-                        Odsek za Softversko Inzenjerstvo Elektrotehnickog Fakulteta Univerziteta u Beogradu
+                        Odsek za Softversko Inženjerstvo Elektrotehničkog Fakulteta Univerziteta u Beogradu
                     </p>
                 </div>
             </div>

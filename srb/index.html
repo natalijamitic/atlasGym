@@ -37,12 +37,12 @@
 
       var $nav = $(".fixed-top");
 
-      $nav.toggleClass('scrolled', $(this).scrollTop() > 2.5 * $nav.height());
+      $nav.toggleClass('scrolled', $(this).scrollTop() > 1.5 * $nav.height());
 
       $(document).scroll(function () {
         var $nav = $(".fixed-top");
 
-        $nav.toggleClass('scrolled', $(this).scrollTop() > 2.5 * $nav.height());
+        $nav.toggleClass('scrolled', $(this).scrollTop() > 1.5 * $nav.height());
 
       })
     })
@@ -66,28 +66,30 @@
       <div class="text-center px-md-0">
         <div class="row d-flex">
           <div class="col-md-4">
-            <img src="../assets/icons/phone.svg" alt="" style="width:15px;">
+            <img src="../assets/icons/phone.svg" alt="" width="15px">
             +381 64 321 0990
           </div>
           <div class="col-md-4">
-            <i class="fab fa-telegram-plane"></i> info@atlas.com
+            <i><a class="navIcon fab fa-telegram-plane" href="mailto:info@atlas.com"> info@atlas.com</a></i>
           </div>
           <div class="col-md-4">
             <div class="row">
               <div class="offset-md-4 col-md-1">
-                <i class="fab fa-facebook-f"></i>
+                <a class="navIcon" href="https://www.facebook.com/atlasgyms/"><i class="fab fa-facebook-f"></i></a>
               </div>
               <div class="col-md-1">
-                <i class="fab fa-instagram"></i>
+                <a class="navIcon" href="https://www.instagram.com/atlasgymsoton/"><i class="fab fa-instagram"></i></a>
               </div>
               <div class="col-md-1">
-                <i class="fab fa-youtube"></i>
+                <a class="navIcon" href="https://www.youtube.com/channel/UCMEUwmRrtLWa4dZ-2HMqIXw"><i
+                    class="fab fa-youtube"></i></a>
               </div>
               <div class="offset-md-2 col-md-1">
-                <a class="" href="#"><img class="flag" src="../assets/imgs/lang/serbia.png" alt=""></a>
+                <a class="parentFlag" href="#"><img class="flag" src="../assets/imgs/lang/serbia.png" alt=""></a>
               </div>
               <div class="col-md-1">
-                <a href="../eng/index.html"><img class="flag" src="../assets/imgs/lang/uk.png" alt=""></a>
+                <a class="parentFlag" href="../eng/index.html"><img class="flag" src="../assets/imgs/lang/uk.png"
+                    alt=""></a>
               </div>
             </div>
           </div>
@@ -103,13 +105,13 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="">
-          <i class="fas fa-bars" style="color: #fcd307; font-size: 28px;"></i>
+          <i class="fas fa-bars toggleNavIcon"></i>
         </span>
       </button>
       <div class="collapse navbar-collapse ml-5" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Pocetna <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Početna</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -119,7 +121,7 @@
             <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="treninzi.html">Treninzi</a>
               <a class="dropdown-item" href="nutricionista.html">Nutricionista</a>
-              <a class="dropdown-item" href="masaze.html">Masaze</a>
+              <a class="dropdown-item" href="masaze.html">Masaže</a>
             </div>
           </li>
           <li class="nav-item">
@@ -129,13 +131,11 @@
         <div class="ml-auto mr-5">
           <ul class="navbar-nav">
             <li class="mrt nav-item">
-              <a class="nav-link" href="zakazi-trening.html">Zakazi Trening</a>
+              <a class="nav-link" href="zakazi-trening.html">Zakaži Trening</a>
             </li>
             <li class="mrt nav-item">
               <a class="nav-link" href="nalog.html">Moj Nalog</a>
             </li>
-
-
             <li class="nav-item lang">
               <a class="nav-link" href="#"><img class="flag" src="../assets/imgs/lang/serbia.png" alt=""></a>
             </li>
@@ -143,8 +143,6 @@
               <a class="nav-link" href="../eng/index.html"><img class="flag" src="../assets/imgs/lang/uk.png"
                   alt=""></a>
             </li>
-
-
           </ul>
         </div>
       </div>
@@ -159,21 +157,32 @@
           <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         </ol>
-        <div class="carousel-inner" onclick="yes()">
+        <div class="carousel-inner">
           <div class="carousel-item drk active">
-            <img src="../assets/imgs/biceps.jpg" class="carImg d-block w-100 img-fluid" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <img
+              src="https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              class="carImg d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-sm-block">
               <h1>ATLAS<span class="strokeme">GYM</span></h1>
               <h2>Raketa do leta</h2>
             </div>
           </div>
-          <div class="carousel-item drk" onclick="yes()">
+          <div class="carousel-item drk">
             <img src="../assets/imgs/woman.jpg" class="carImg d-block w-100 img-fluid" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-sm-block">
               <h1>ATLAS je<span class="strokeme">dom</span></h1>
               <h2>Raketa posle leta</h2>
             </div>
           </div>
+
+          <div class="carousel-item drk">
+            <img src="../assets/imgs/biceps.jpg" class="carImg d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-sm-block">
+              <h1>ATLAS je<span class="strokeme">snaga</span></h1>
+              <h2>Udri jače manijače</h2>
+            </div>
+          </div>
+
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -222,34 +231,47 @@
       <section>
         <div class="container intro">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-12 text-center mt-4">
               <h6>Zdravo!</h6>
-              <h2>Dobro dosli u <span>ATLAS</span>Teretanu</h2>
-              <p class="font-weight-lighter">
-                <small>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, consequuntur minima quibusdam
-                  repudiandae, possimus debitis iusto. Voluptates ea provident quis nobis quae assumenda culpa, autem.
-                  Omnis dolores ratione in doloribus consequatur quia amet mollitia libero deleniti eos vero, impedit!
-                  Laudantium quos voluptas optio cumque facere debitis. Consectetur, molestias voluptatibus a!
-                </small>
-              </p>
-              <button type="button" name="button" class="btn btn-warning mb-5"
-                onclick="window.open('zakazi-trening.html');">Zakazi Trening</button>
+              <h2>Dobro došao u <span>ATLAS</span>Teretanu</h2>
+              <br> <br>
             </div>
-            <div class="col-md-6">
+
+            <div class="col-lg-6 biggerFont">
+
+
+              Zeliš da <h2 class="inline">omršaš</h2>, <h2 class="inline">ojačaš</h2> ili jednostavno <h2
+                class="inline">ostaneš
+                u treningu ?</h2>
+              <br> <br>
+              Ovde si na pravom mestu. Već 5 godina mamimo kako osmeh na lice tako i six-pack na stomak.
+              Tvoje je samo da dođeš i oznojiš se.
+
+
+              <br> <br>
+              Tu smo svakog dana <h2 class="inline">od <span class="inline">6h</span> do <span class="inline">23h</span
+                  class="inline"></h2>.
+              Dođi da se družimo.
+              <br> <br>
+
+              <h2 class="smallerFont">Šta čekaš?</h2>
+              <button type="button" name="button" class="btn btn-warning mb-5"
+                onclick="window.open('zakazi-trening.html');"><strong>Zakaži Trening</strong></button>
+            </div>
+
+            <div class="col-lg-6">
               <div class="row mb-3">
-                <div class="col-12">
+                <div class="col-12 col-md-6 col-lg-12 mb-3">
                   <img src="../assets/imgs/pic0.jpg" alt="">
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 mb-3">
+              
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                   <img class="img-fluid" src="../assets/imgs/pic1.jpg" alt="">
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                   <img class="img-fluid" src="../assets/imgs/pic2.jpg" alt="">
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                   <img class="img-fluid" src="../assets/imgs/woman.jpg" alt="">
                 </div>
               </div>
@@ -264,7 +286,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-12 text-center pt-4">
-                  <h2>Nasi <span>najbolji</span> treninzi:</h2>
+                  <h2>Naši <span>najbolji</span> treninzi:</h2>
                 </div>
               </div>
               <div class="row mt-5 mb-5">
@@ -302,8 +324,7 @@
                       </h5>
                       <small class="card-description mb-3"></small>
                       <div class="text-center mt-3">
-                        <a href=""
-                          class="btn btn-warning view card-link">Pogledaj</a>
+                        <a href="" class="btn btn-warning view card-link">Pogledaj</a>
                       </div>
                     </div>
                   </div>
@@ -355,15 +376,18 @@
           <div class="row">
             <div class="col-md-4 mb-5">
               <h5>O nama</h5>
-              <p class="font-weight-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nobis nihil
-                eum, dolorem ut harum, possimus eligendi eaque cupiditate expedita.</p>
+              <p class="mb-0">
+                Zgodni treneri, nove sprave, čiste svlačionice. Sve je tu.
+                <p class="text-right">A gde je Nataša?</p>
+              </p>
             </div>
             <div class="offset-md-4 col-md-4">
-              <h5>Imas pitanje?</h5>
+              <h5>Imaš pitanje?</h5>
 
               <p><i class="fas fa-map-marker-alt"></i> Bregovita 11, 11080 Zemun, Beograd</p>
-              <p><img src="../assets/icons/phoneDarker.svg" alt="" style="width:15px;"> +381 64 321 0990</p>
-              <p><i class="fab fa-telegram-plane"></i> info@atlas.com</p>
+              <p><img src="../assets/icons/phoneDarker.svg" alt="" width="15px"> +381 64 321 0990</p>
+              <p><i class=""><a class="footerIcon fab fa-telegram-plane" href="mailto:info@atlas.com">
+                    info@atlas.com</i></a></p>
 
             </div>
           </div>
@@ -377,9 +401,9 @@
       <div class="row">
         <div class="col-md-12 pt-2">
           <p>
-            &copy; 2020 Divjak Marko, Mitic Natalija
+            &copy; 2020 Divjak Marko, Mitić Natalija
             <br>
-            Odsek za Softversko Inzenjerstvo Elektrotehnickog Fakulteta Univerziteta u Beogradu
+            Odsek za Softversko Inženjerstvo Elektrotehničkog Fakulteta Univerziteta u Beogradu
           </p>
         </div>
       </div>

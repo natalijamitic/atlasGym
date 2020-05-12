@@ -157,6 +157,35 @@ body {
   background-color: #f8f8f9 !important;
 }
 
+.toggleNavIcon {
+  color: #fcd307; 
+  font-size: 28px;
+}
+
+.navIcon, .scrolled .navIcon {
+  color: white !important;
+}
+
+.navIcon:hover, .scrolled .navIcon:hover {
+  border: none;
+  color: #fcd307 !important;
+  text-decoration: none;
+}
+
+.flag:hover, .scrolled .flag:hover, .parentFlag:hover, .scrolled .parentFlag:hover {
+  border: none;
+  opacity: 0.8;
+}
+
+.footerIcon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footerIcon:hover {
+  color: #fcd307;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 1175px) {
   .navbar-brand {
     margin-left: 10px;
@@ -302,9 +331,24 @@ body {
   left: -15px;
 }
 
-
 .carousel-caption h2:before {
   right: -10px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  margin-bottom: -7rem !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .carousel-caption {
+    margin-bottom: 10rem !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .carousel-caption {
+    margin-bottom: 7rem !important;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -313,6 +357,11 @@ body {
   }
   .bd-example {
     margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 654px) {
+  .carousel-caption {
+    margin-bottom: 5rem !important;
   }
 }
 
@@ -355,6 +404,22 @@ body {
 .intro h2 span {
   color: #fcd307;
   display: block;
+}
+
+h2.aboutIndex {
+  font-size: 15px;
+}
+h2.inline {
+  display: inline !important;
+  font-size: 17px;
+}
+
+.biggerFont {
+  font-size: 1.2rem;
+}
+
+.smallerFont {
+  font-size: 20px !important;
 }
 
 .intro p {
@@ -600,6 +665,10 @@ body {
 
 
 /* SINGLE TR */
+
+.card-description {
+  font-size: 15px;
+}
 
 /******************************************************/
 /* GALLERY */
@@ -851,14 +920,19 @@ content: '';
 
 /* ABOUT */
 
+.inline {
+  display: inline !important;
+}
+
 .social .fab{
   font-size: 18px;
   padding: 3px;
   padding-top: 0px !important;
+  color: white;
 }
 
 .social .fab:hover {
-  color: white;
+  color: #fcd307;
 }
 
 .team-member .subheading {
