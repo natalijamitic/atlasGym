@@ -23,7 +23,43 @@ var workouts = [
         }],
         imgs: ["../assets/imgs/yoga/yoga1.jpg", "../assets/imgs/yoga/yoga2.jpg", "../assets/imgs/yoga/yoga3.jpg", "../assets/imgs/yoga/yoga4.jpg", "../assets/imgs/yoga/yoga5.jpg", "../assets/imgs/yoga/yoga6.jpg", "../assets/imgs/yoga/yoga7.jpg", "../assets/imgs/yoga/yoga8.jpg"],
         video: "",
-        profile: "../assets/imgs/yoga/yoga6.jpg"
+        profile: "../assets/imgs/yoga/yoga6.jpg",
+
+        trainings: [{
+            day: "Ponedeljak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Utorak",
+            time: "19:30-21:00",
+            available: 2
+        },
+        {
+            day: "Sreda",
+            time: "17:00-18:00",
+            available: 3
+        },
+        {
+            day: "Sreda",
+            time: "19:30-20:30",
+            available: 3
+        },
+        {
+            day: "Cetvrtak",
+            time: "20:00-21:00",
+            available: 2
+        },
+        {
+            day: "Petak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Subota",
+            time: "13:00-14:00",
+            available: 0
+        }]
     },
     {
         id: 2,
@@ -38,7 +74,33 @@ var workouts = [
         comments: [],
         imgs: ["../assets/imgs/yoga/yoga9.jpg", "../assets/imgs/yoga/yoga10.jpg", "../assets/imgs/yoga/yoga11.jpg", "../assets/imgs/yoga/yoga12.jpg", "../assets/imgs/yoga/yoga13.jpg", "../assets/imgs/yoga/yoga14.jpg", "../assets/imgs/yoga/yoga15.jpg", "../assets/imgs/yoga/yoga16.jpg"],
         video: "",
-        profile: "../assets/imgs/yoga/yoga5.jpg"
+        profile: "../assets/imgs/yoga/yoga5.jpg",
+
+        trainings: [{
+            day: "Ponedeljak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Utorak",
+            time: "19:30-21:00",
+            available: 2
+        },
+        {
+            day: "Sreda",
+            time: "17:00-18:00",
+            available: 3
+        },
+        {
+            day: "Petak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Subota",
+            time: "13:00-14:00",
+            available: 0
+        }]
     },
     {
         id: 3,
@@ -53,7 +115,33 @@ var workouts = [
         comments: [],
         imgs: ["../assets/imgs/yoga/yoga11.jpg", "../assets/imgs/yoga/yoga12.jpg", "../assets/imgs/yoga/yoga13.jpg", "../assets/imgs/yoga/yoga14.jpg", "../assets/imgs/yoga/yoga5.jpg", "../assets/imgs/yoga/yoga6.jpg", "../assets/imgs/yoga/yoga7.jpg", "../assets/imgs/yoga/yoga8.jpg"],
         video: "",
-        profile: "../assets/imgs/yoga/yoga4.jpg"
+        profile: "../assets/imgs/yoga/yoga4.jpg",
+
+        trainings: [{
+            day: "Ponedeljak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Sreda",
+            time: "17:00-18:00",
+            available: 5
+        },
+        {
+            day: "Sreda",
+            time: "19:30-20:30",
+            available: 3
+        },
+        {
+            day: "Cetvrtak",
+            time: "20:00-21:00",
+            available: 4
+        },
+        {
+            day: "Petak",
+            time: "20:00-21:00",
+            available: 1
+        }]
     },
     {
         id: 4,
@@ -68,7 +156,43 @@ var workouts = [
         comments: [],
         imgs: ["../assets/imgs/yoga/yoga1.jpg", "../assets/imgs/yoga/yoga2.jpg", "../assets/imgs/yoga/yoga3.jpg", "../assets/imgs/yoga/yoga4.jpg", "../assets/imgs/yoga/yoga5.jpg", "../assets/imgs/yoga/yoga16.jpg", "../assets/imgs/yoga/yoga10.jpg", "../assets/imgs/yoga/yoga11.jpg"],
         video: "",
-        profile: "../assets/imgs/yoga/yoga1.jpg"
+        profile: "../assets/imgs/yoga/yoga1.jpg",
+
+        trainings: [{
+            day: "Ponedeljak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Utorak",
+            time: "19:30-21:00",
+            available: 2
+        },
+        {
+            day: "Sreda",
+            time: "17:00-18:00",
+            available: 0
+        },
+        {
+            day: "Sreda",
+            time: "19:30-20:30",
+            available: 0
+        },
+        {
+            day: "Cetvrtak",
+            time: "20:00-21:00",
+            available: 2
+        },
+        {
+            day: "Petak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Subota",
+            time: "13:00-14:00",
+            available: 0
+        }]
     },
     {
         id: 5,
@@ -83,7 +207,19 @@ var workouts = [
         comments: [],
         imgs: ["../assets/imgs/yoga/yoga11.jpg", "../assets/imgs/yoga/yoga12.jpg", "../assets/imgs/yoga/yoga13.jpg", "../assets/imgs/yoga/yoga14.jpg", "../assets/imgs/yoga/yoga5.jpg", "../assets/imgs/yoga/yoga6.jpg", "../assets/imgs/yoga/yoga7.jpg", "../assets/imgs/yoga/yoga8.jpg"],
         video: "",
-        profile: "../assets/imgs/yoga/yoga2.jpg"
+        profile: "../assets/imgs/yoga/yoga2.jpg",
+
+        trainings: [
+        {
+            day: "Petak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Subota",
+            time: "13:00-14:00",
+            available: 0
+        }]
     },
     {
         id: 6,
@@ -98,7 +234,28 @@ var workouts = [
         comments: [],
         imgs: ["../assets/imgs/yoga/yoga9.jpg", "../assets/imgs/yoga/yoga12.jpg", "../assets/imgs/yoga/yoga14.jpg", "../assets/imgs/yoga/yoga14.jpg", "../assets/imgs/yoga/yoga5.jpg", "../assets/imgs/yoga/yoga1.jpg", "../assets/imgs/yoga/yoga2.jpg", "../assets/imgs/yoga/yoga3.jpg"],
         video: "",
-        profile: "../assets/imgs/yoga/yoga3.jpg"
+        profile: "../assets/imgs/yoga/yoga3.jpg",
+
+        trainings: [{
+            day: "Ponedeljak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Utorak",
+            time: "19:30-21:00",
+            available: 2
+        },
+        {
+            day: "Cetvrtk",
+            time: "18:00-19:00",
+            available: 7
+        },
+        {
+            day: "Subota",
+            time: "13:00-14:00",
+            available: 0
+        }]
     },
     {
         id: 7,
@@ -121,7 +278,43 @@ var workouts = [
         }],
         imgs: ["../assets/imgs/core/core1.jpg", "../assets/imgs/core/core2.jpg", "../assets/imgs/core/core3.jpg", "../assets/imgs/core/core4.jpg", "../assets/imgs/core/core5.jpg", "../assets/imgs/core/core6.jpg", "../assets/imgs/core/core7.jpg", "../assets/imgs/core/core8.jpg"],
         video: "",
-        profile: "../assets/imgs/core/core1.jpg"
+        profile: "../assets/imgs/core/core1.jpg",
+
+        trainings: [{
+            day: "Ponedeljak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Utorak",
+            time: "19:30-21:00",
+            available: 2
+        },
+        {
+            day: "Sreda",
+            time: "17:00-18:00",
+            available: 3
+        },
+        {
+            day: "Sreda",
+            time: "19:30-20:30",
+            available: 3
+        },
+        {
+            day: "Cetvrtak",
+            time: "20:00-21:00",
+            available: 2
+        },
+        {
+            day: "Petak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Subota",
+            time: "13:00-14:00",
+            available: 0
+        }]
     },
     {
         id: 8,
@@ -137,7 +330,43 @@ var workouts = [
         imgs: ["../assets/imgs/core/core5.jpg", "../assets/imgs/core/core6.jpg", "../assets/imgs/core/core7.jpg", "../assets/imgs/core/core8.jpg", "../assets/imgs/core/core9.jpg", "../assets/imgs/core/core10.jpg", "../assets/imgs/core/core11.jpg", "../assets/imgs/core/core12.jpg"],
         comments: [],
         video: "",
-        profile: "../assets/imgs/core/core5.jpg"
+        profile: "../assets/imgs/core/core5.jpg",
+
+        trainings: [{
+            day: "Ponedeljak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Utorak",
+            time: "19:30-21:00",
+            available: 2
+        },
+        {
+            day: "Sreda",
+            time: "17:00-18:00",
+            available: 3
+        },
+        {
+            day: "Sreda",
+            time: "19:30-20:30",
+            available: 4
+        },
+        {
+            day: "Cetvrtak",
+            time: "20:00-21:00",
+            available: 2
+        },
+        {
+            day: "Petak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Subota",
+            time: "13:00-14:00",
+            available: 0
+        }]
     },
     {
         id: 9,
@@ -153,7 +382,43 @@ var workouts = [
         imgs: ["../assets/imgs/core/core7.jpg", "../assets/imgs/core/core8.jpg", "../assets/imgs/core/core9.jpg", "../assets/imgs/core/core10.jpg", "../assets/imgs/core/core11.jpg", "../assets/imgs/core/core12.jpg", "../assets/imgs/core/core13.jpg", "../assets/imgs/core/core14.jpg"],
         comments: [],
         video: "",
-        profile: "../assets/imgs/core/core12.jpg"
+        profile: "../assets/imgs/core/core12.jpg",
+
+        trainings: [{
+            day: "Ponedeljak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Utorak",
+            time: "19:30-21:00",
+            available: 2
+        },
+        {
+            day: "Sreda",
+            time: "17:00-18:00",
+            available: 3
+        },
+        {
+            day: "Sreda",
+            time: "19:30-20:30",
+            available: 3
+        },
+        {
+            day: "Cetvrtak",
+            time: "20:00-21:00",
+            available: 2
+        },
+        {
+            day: "Petak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Subota",
+            time: "13:00-14:00",
+            available: 0
+        }]
     },
     {
         id: 10,
@@ -168,7 +433,43 @@ var workouts = [
         comments: [],
         imgs: ["../assets/imgs/cardio/cardio3.jpg", "../assets/imgs/cardio/cardio7.jpg", "../assets/imgs/cardio/cardio12.jpg", "../assets/imgs/cardio/cardio13.jpg", "../assets/imgs/cardio/cardio14.jpg", "../assets/imgs/cardio/cardio15.jpg", "../assets/imgs/cardio/cardio16.jpg", "../assets/imgs/cardio/cardio17.jpg"],
         video: "",
-        profile: "../assets/imgs/cardio/cardio4.jpg"
+        profile: "../assets/imgs/cardio/cardio4.jpg",
+
+        trainings: [{
+            day: "Ponedeljak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Utorak",
+            time: "19:30-21:00",
+            available: 2
+        },
+        {
+            day: "Sreda",
+            time: "17:00-18:00",
+            available: 3
+        },
+        {
+            day: "Sreda",
+            time: "19:30-20:30",
+            available: 3
+        },
+        {
+            day: "Cetvrtak",
+            time: "20:00-21:00",
+            available: 2
+        },
+        {
+            day: "Petak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Subota",
+            time: "13:00-14:00",
+            available: 0
+        }]
     },
     {
         id: 11,
@@ -190,7 +491,43 @@ var workouts = [
         }],
         imgs: ["../assets/imgs/cardio/cardio1.jpg", "../assets/imgs/cardio/cardio2.jpg", "../assets/imgs/cardio/cardio4.jpg", "../assets/imgs/cardio/cardio5.jpg", "../assets/imgs/cardio/cardio6.jpg", "../assets/imgs/cardio/cardio8.jpg", "../assets/imgs/cardio/cardio9.jpg", "../assets/imgs/cardio/cardio10.jpg"],
         profile: "../assets/imgs/cardio/cardio2.jpg",
-        video: ""
+        video: "",
+
+        trainings: [{
+            day: "Ponedeljak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Utorak",
+            time: "19:30-21:00",
+            available: 2
+        },
+        {
+            day: "Sreda",
+            time: "17:00-18:00",
+            available: 3
+        },
+        {
+            day: "Sreda",
+            time: "19:30-20:30",
+            available: 3
+        },
+        {
+            day: "Cetvrtak",
+            time: "20:00-21:00",
+            available: 2
+        },
+        {
+            day: "Petak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Subota",
+            time: "13:00-14:00",
+            available: 0
+        }]
     },
     {
         id: 12,
@@ -205,7 +542,43 @@ var workouts = [
         comments: [],
         imgs: ["../assets/imgs/cardio/cardio11.jpg", "../assets/imgs/cardio/cardio2.jpg", "../assets/imgs/cardio/cardio4.jpg", "../assets/imgs/cardio/cardio5.jpg", "../assets/imgs/cardio/cardio6.jpg", "../assets/imgs/cardio/cardio8.jpg", "../assets/imgs/cardio/cardio9.jpg", "../assets/imgs/cardio/cardio10.jpg"],
         profile: "../assets/imgs/cardio/cardio11.jpg",
-        video: ""
+        video: "",
+
+        trainings: [{
+            day: "Ponedeljak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Utorak",
+            time: "19:30-21:00",
+            available: 2
+        },
+        {
+            day: "Sreda",
+            time: "17:00-18:00",
+            available: 3
+        },
+        {
+            day: "Sreda",
+            time: "19:30-20:30",
+            available: 3
+        },
+        {
+            day: "Cetvrtak",
+            time: "20:00-21:00",
+            available: 2
+        },
+        {
+            day: "Petak",
+            time: "20:00-21:00",
+            available: 1
+        },
+        {
+            day: "Subota",
+            time: "13:00-14:00",
+            available: 0
+        }]
     }
 
 ]
