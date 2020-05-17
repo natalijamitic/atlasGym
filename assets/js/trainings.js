@@ -53,12 +53,45 @@ function createWorkoutPreview(workout) {
     </div>`;
 }
 
+function bookTraining(id, i) {
+    user.booked.push({
+        'workoutId': id,
+        'trainingIndex': i
+    });
+    event.target.parentElement.previousElementSibling.innerText = --workouts[id-1].trainings[i].available;
+    
+    memorize();
+
+    parent = event.target.parentElement;
+    parent.innerHTML = '';
+    //ubaci proveru da li moze da otkaze trening
+    parent.innerHTML =
+        `<button class="btn btn-outline-danger" onclick="cancelTraining(${id},${i})">Otkaži</button>`;
+}
+
+function cancelTraining(id, ix) {
+    for(let i = 0; i < user.booked.length; i++) {
+        if(user.booked[i].workoutId == id && user.booked[i].trainingIndex == ix) {
+            user.booked.splice(i, 1);
+            break;
+        }
+    }
+    event.target.parentElement.previousElementSibling.innerText = ++workouts[id-1].trainings[ix].available;
+
+    memorize();
+    
+    parent = event.target.parentElement;
+    parent.innerHTML = '';
+    parent.innerHTML =
+        `<button class="btn btn-outline-success" onclick="bookTraining(${id},${ix})">Zakaži</button>`;
+}
+
 function createModal(workout) {
     let html = '';
     for(let i = 0; i < workout.trainings.length; i++) {
         let button = '';
         if(workout.trainings[i].available > 0)
-            button = '<button class="btn btn-outline-success">Zakaži</button>';
+            button = `<button class="btn btn-outline-success" onclick="bookTraining(${workout.id},${i})">Zakaži</button>`;
 
         html = html + `
         <tr>
@@ -71,12 +104,15 @@ function createModal(workout) {
         </tr> 
         `;
     }
+    let date = new Date();
+    let endDate = new Date();
+    endDate.setDate(date.getDate() + 7);
     return `
     <div class="modal fade" id="modal${workout.id}" tabindex="-1" role="dialog" aria-labelledby="modalTitle${workout.id}" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalTitle${workout.id}">${workout.category}&nbsp;${workout.name}</h5>
+                <h5 class="modal-title" id="modalTitle${workout.id}">${workout.category}&nbsp;${workout.name}&nbsp;${date.toLocaleDateString() + "  -  " + endDate.toLocaleDateString()}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
