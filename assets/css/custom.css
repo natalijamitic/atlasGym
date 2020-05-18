@@ -673,6 +673,10 @@ h2.inline {
 
 /* SINGLE TR */
 
+.wholePage {
+  display: none;
+}
+
 .card-description {
   font-size: 15px;
 }

@@ -37,12 +37,14 @@ function populateIndex() {
 /*********** TRAINING ************/
 let workout;
 function populateTraining() {
+    $(".wholePage").css("display", "initial");
     id = getParameterByName('id') - 1;
     workout = workouts[id];
     writeTraining(id);
 }
 
 function writeTraining(id) {
+    
     document.getElementsByClassName("card-fullName")[0].innerText = getTypeName(workout.category) + " " + workout.name;
     document.getElementsByClassName("card-link")[0].href = "treninzi-grupno.html?tip=" + workout.category;
     document.getElementsByClassName("card-name")[0].innerText = workout.name;
