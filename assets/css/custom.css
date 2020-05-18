@@ -872,6 +872,26 @@ h4 .progress .progress-value {
   background-color: white;
 }
 
+.input-group-addon {
+  width: 40px;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  border-left: none;
+}
+
+.calIcon {
+  width: 15px;
+  margin: auto;
+  padding: 0;
+}
+
+.calSvg {
+  width: 30px;
+  margin: auto;
+  padding: 0;
+}
 
 /* CHECKBOX PDF */
 
