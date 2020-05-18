@@ -39,7 +39,7 @@ function createWorkoutPreview(workout) {
     return `<div class="col-lg-4 col-md-6 mb-5 filter-${workout.category}">
     <div class="card h-100 bg-dark text-white">
         <img class="img-fluid" src="${workout.profile}" alt="">
-        <div class="card-body">
+        <div class="card-body pb-0">
             <h5 class="card-title">
                 ${workout.category}&nbsp;${workout.name}
             </h5>
