@@ -8,12 +8,12 @@ var filter = {
 function filterOut(name, status) {
     filter[name] = status;
     let showAll = false;
-    if(!filter['Joga'] && !filter['Pilates'] && !filter['Core'] && !filter['Kardio'])
+    if (!filter['Joga'] && !filter['Pilates'] && !filter['Core'] && !filter['Kardio'])
         showAll = true;
     for (var key in filter) {
         let els = document.getElementsByClassName('filter-' + key);
-        for(let i = 0; i < els.length; i++) {
-            els[i].style.display = ((filter[key] || showAll ) ? 'inline-block' : 'none');
+        for (let i = 0; i < els.length; i++) {
+            els[i].style.display = ((filter[key] || showAll) ? 'inline-block' : 'none');
         }
     }
 }
@@ -22,14 +22,14 @@ function populateBookTrainings() {
     let container = document.getElementById('listTrainings');
     container.innerHTML = '';
     let row = document.createElement('div');
-    for(let i = 0; i < workouts.length; i++) {
+    for (let i = 0; i < workouts.length; i++) {
         //if(!filter[workouts[i].category]) continue;
         let html = createWorkoutPreview(workouts[i]);
         row.setAttribute('class', 'row mb-5 ml-4');
         row.innerHTML = row.innerHTML + html;
     }
     container.appendChild(row);
-    for(let i = 0; i < workouts.length; i++) {
+    for (let i = 0; i < workouts.length; i++) {
         //if(!filter[workouts[i].category]) continue;
         document.body.innerHTML = document.body.innerHTML + createModal(workouts[i]);
     }
@@ -37,7 +37,7 @@ function populateBookTrainings() {
 
 function createWorkoutPreview(workout) {
     return `<div class="col-lg-4 col-md-6 mb-5 filter-${workout.category}">
-    <div class="card bg-dark text-white">
+    <div class="card h-100 bg-dark text-white">
         <img class="img-fluid" src="${workout.profile}" alt="">
         <div class="card-body">
             <h5 class="card-title">
@@ -45,8 +45,10 @@ function createWorkoutPreview(workout) {
             </h5>
             <p>Trajanje: ${workout.duration}</p>
             <p>Tezina: ${workout.level}</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-warning view zak" data-toggle="modal" data-target="#modal${workout.id}">Vidi</a>
+        </div>
+        <div class="card-footer mb-3 mt-0">
+            <div class="text-center mt-3">
+                <a href="#" class="align-self-end btn btn-warning view zak" data-toggle="modal" data-target="#modal${workout.id}">Vidi</a>
             </div>
         </div>
     </div>
@@ -58,8 +60,8 @@ function bookTraining(id, i) {
         'workoutId': id,
         'trainingIndex': i
     });
-    event.target.parentElement.previousElementSibling.innerText = --workouts[id-1].trainings[i].available;
-    
+    event.target.parentElement.previousElementSibling.innerText = --workouts[id - 1].trainings[i].available;
+
     memorize();
 
     parent = event.target.parentElement;
@@ -70,16 +72,16 @@ function bookTraining(id, i) {
 }
 
 function cancelTraining(id, ix) {
-    for(let i = 0; i < user.booked.length; i++) {
-        if(user.booked[i].workoutId == id && user.booked[i].trainingIndex == ix) {
+    for (let i = 0; i < user.booked.length; i++) {
+        if (user.booked[i].workoutId == id && user.booked[i].trainingIndex == ix) {
             user.booked.splice(i, 1);
             break;
         }
     }
-    event.target.parentElement.previousElementSibling.innerText = ++workouts[id-1].trainings[ix].available;
+    event.target.parentElement.previousElementSibling.innerText = ++workouts[id - 1].trainings[ix].available;
 
     memorize();
-    
+
     parent = event.target.parentElement;
     parent.innerHTML = '';
     parent.innerHTML =
@@ -88,9 +90,9 @@ function cancelTraining(id, ix) {
 
 function createModal(workout) {
     let html = '';
-    for(let i = 0; i < workout.trainings.length; i++) {
+    for (let i = 0; i < workout.trainings.length; i++) {
         let button = '';
-        if(workout.trainings[i].available > 0)
+        if (workout.trainings[i].available > 0)
             button = `<button class="btn btn-outline-success" onclick="bookTraining(${workout.id},${i})">Zakaži</button>`;
 
         html = html + `
