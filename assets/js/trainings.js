@@ -90,14 +90,25 @@ function cancelTraining(id, ix) {
 
 function createModal(workout) {
     let html = '';
+    let days = ['Nedelja', 'Ponedeljak', 'Utorak', 'Sreda', 'Cetvrtak', 'Petak', 'Subota'];
+    let today = new Date(); today = today.getDay(); today = (today + 7) % 8;
+    let time = new Date();
     for (let i = 0; i < workout.trainings.length; i++) {
         let button = '';
         if (workout.trainings[i].available > 0)
             button = `<button class="btn btn-outline-success" onclick="bookTraining(${workout.id},${i})">Zakaži</button>`;
+        let trainingDay = (workout.trainings[i].day + 7) % 8;
+        if(today > trainingDay) button = '';
 
+        let hours1, hours2, min1, min2;
+        hours1 = time.getHours(); hours2 = workout.trainings[i].time.slice(0,2);
+        min1 = time.getMinutes(); min2 = workout.trainings[i].time.slice(3,5);
+        if(hours1 > hours2 || (hours1 == hours2 && min1 > min2))
+            button = '';
+        
         html = html + `
         <tr>
-        <td class="p-2">${workout.trainings[i].day}</td>
+        <td class="p-2">${days[workout.trainings[i].day]}</td>
         <td class="p-2">${workout.trainings[i].time}</td>
         <td class="p-2">${workout.trainings[i].available}</td>
         <td class="p-2">
@@ -106,15 +117,12 @@ function createModal(workout) {
         </tr> 
         `;
     }
-    let date = new Date();
-    let endDate = new Date();
-    endDate.setDate(date.getDate() + 7);
     return `
     <div class="modal fade" id="modal${workout.id}" tabindex="-1" role="dialog" aria-labelledby="modalTitle${workout.id}" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalTitle${workout.id}">${workout.category}&nbsp;${workout.name}&nbsp;${date.toLocaleDateString() + "  -  " + endDate.toLocaleDateString()}</h5>
+                <h5 class="modal-title" id="modalTitle${workout.id}">${workout.category}&nbsp;${workout.name}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>

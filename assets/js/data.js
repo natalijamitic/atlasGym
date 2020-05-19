@@ -34,37 +34,37 @@ if(sessionStorage.getItem("workouts") === null) {
             profile: "../assets/imgs/yoga/yoga6.jpg",
     
             trainings: [{
-                day: "Ponedeljak",
+                day: 1,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Utorak",
+                day: 2,
                 time: "19:30-21:00",
                 available: 2
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "17:00-18:00",
                 available: 3
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "19:30-20:30",
                 available: 3
             },
             {
-                day: "Cetvrtak",
+                day: 4,
                 time: "20:00-21:00",
                 available: 2
             },
             {
-                day: "Petak",
+                day: 5,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Subota",
+                day: 6,
                 time: "13:00-14:00",
                 available: 0
             }]
@@ -85,27 +85,27 @@ if(sessionStorage.getItem("workouts") === null) {
             profile: "../assets/imgs/yoga/yoga5.jpg",
     
             trainings: [{
-                day: "Ponedeljak",
+                day: 1,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Utorak",
+                day: 2,
                 time: "19:30-21:00",
                 available: 2
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "17:00-18:00",
                 available: 3
             },
             {
-                day: "Petak",
+                day: 5,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Subota",
+                day: 6,
                 time: "13:00-14:00",
                 available: 0
             }]
@@ -126,27 +126,27 @@ if(sessionStorage.getItem("workouts") === null) {
             profile: "../assets/imgs/yoga/yoga4.jpg",
     
             trainings: [{
-                day: "Ponedeljak",
+                day: 1,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "17:00-18:00",
                 available: 5
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "19:30-20:30",
                 available: 3
             },
             {
-                day: "Cetvrtak",
+                day: 4,
                 time: "20:00-21:00",
                 available: 4
             },
             {
-                day: "Petak",
+                day: 5,
                 time: "20:00-21:00",
                 available: 1
             }]
@@ -167,37 +167,37 @@ if(sessionStorage.getItem("workouts") === null) {
             profile: "../assets/imgs/yoga/yoga1.jpg",
     
             trainings: [{
-                day: "Ponedeljak",
+                day: 1,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Utorak",
+                day: 2,
                 time: "19:30-21:00",
                 available: 2
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "17:00-18:00",
                 available: 0
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "19:30-20:30",
                 available: 0
             },
             {
-                day: "Cetvrtak",
+                day: 4,
                 time: "20:00-21:00",
                 available: 2
             },
             {
-                day: "Petak",
+                day: 5,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Subota",
+                day: 6,
                 time: "13:00-14:00",
                 available: 0
             }]
@@ -219,12 +219,12 @@ if(sessionStorage.getItem("workouts") === null) {
     
             trainings: [
             {
-                day: "Petak",
+                day: 5,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Subota",
+                day: 6,
                 time: "13:00-14:00",
                 available: 0
             }]
@@ -245,22 +245,22 @@ if(sessionStorage.getItem("workouts") === null) {
             profile: "../assets/imgs/yoga/yoga3.jpg",
     
             trainings: [{
-                day: "Ponedeljak",
+                day: 1,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Utorak",
+                day: 2,
                 time: "19:30-21:00",
                 available: 2
             },
             {
-                day: "Cetvrtk",
+                day: 4,
                 time: "18:00-19:00",
                 available: 7
             },
             {
-                day: "Subota",
+                day: 6,
                 time: "13:00-14:00",
                 available: 0
             }]
@@ -289,37 +289,37 @@ if(sessionStorage.getItem("workouts") === null) {
             profile: "../assets/imgs/core/core1.jpg",
     
             trainings: [{
-                day: "Ponedeljak",
+                day: 1,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Utorak",
+                day: 2,
                 time: "19:30-21:00",
                 available: 2
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "17:00-18:00",
                 available: 3
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "19:30-20:30",
                 available: 3
             },
             {
-                day: "Cetvrtak",
+                day: 4,
                 time: "20:00-21:00",
                 available: 2
             },
             {
-                day: "Petak",
+                day: 5,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Subota",
+                day: 6,
                 time: "13:00-14:00",
                 available: 0
             }]
@@ -341,37 +341,37 @@ if(sessionStorage.getItem("workouts") === null) {
             profile: "../assets/imgs/core/core5.jpg",
     
             trainings: [{
-                day: "Ponedeljak",
+                day: 1,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Utorak",
+                day: 2,
                 time: "19:30-21:00",
                 available: 2
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "17:00-18:00",
                 available: 3
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "19:30-20:30",
                 available: 4
             },
             {
-                day: "Cetvrtak",
+                day: 4,
                 time: "20:00-21:00",
                 available: 2
             },
             {
-                day: "Petak",
+                day: 5,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Subota",
+                day: 6,
                 time: "13:00-14:00",
                 available: 0
             }]
@@ -393,37 +393,37 @@ if(sessionStorage.getItem("workouts") === null) {
             profile: "../assets/imgs/core/core12.jpg",
     
             trainings: [{
-                day: "Ponedeljak",
+                day: 1,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Utorak",
+                day: 2,
                 time: "19:30-21:00",
                 available: 2
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "17:00-18:00",
                 available: 3
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "19:30-20:30",
                 available: 3
             },
             {
-                day: "Cetvrtak",
+                day: 4,
                 time: "20:00-21:00",
                 available: 2
             },
             {
-                day: "Petak",
+                day: 5,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Subota",
+                day: 6,
                 time: "13:00-14:00",
                 available: 0
             }]
@@ -444,37 +444,37 @@ if(sessionStorage.getItem("workouts") === null) {
             profile: "../assets/imgs/cardio/cardio4.jpg",
     
             trainings: [{
-                day: "Ponedeljak",
+                day: 1,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Utorak",
+                day: 2,
                 time: "19:30-21:00",
                 available: 2
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "17:00-18:00",
                 available: 3
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "19:30-20:30",
                 available: 3
             },
             {
-                day: "Cetvrtak",
+                day: 4,
                 time: "20:00-21:00",
                 available: 2
             },
             {
-                day: "Petak",
+                day: 5,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Subota",
+                day: 6,
                 time: "13:00-14:00",
                 available: 0
             }]
@@ -502,37 +502,37 @@ if(sessionStorage.getItem("workouts") === null) {
             video: "",
     
             trainings: [{
-                day: "Ponedeljak",
+                day: 1,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Utorak",
+                day: 2,
                 time: "19:30-21:00",
                 available: 2
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "17:00-18:00",
                 available: 3
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "19:30-20:30",
                 available: 3
             },
             {
-                day: "Cetvrtak",
+                day: 4,
                 time: "20:00-21:00",
                 available: 2
             },
             {
-                day: "Petak",
+                day: 5,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Subota",
+                day: 6,
                 time: "13:00-14:00",
                 available: 0
             }]
@@ -553,37 +553,37 @@ if(sessionStorage.getItem("workouts") === null) {
             video: "",
     
             trainings: [{
-                day: "Ponedeljak",
+                day: 1,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Utorak",
+                day: 2,
                 time: "19:30-21:00",
                 available: 2
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "17:00-18:00",
                 available: 3
             },
             {
-                day: "Sreda",
+                day: 3,
                 time: "19:30-20:30",
                 available: 3
             },
             {
-                day: "Cetvrtak",
+                day: 4,
                 time: "20:00-21:00",
                 available: 2
             },
             {
-                day: "Petak",
+                day: 5,
                 time: "20:00-21:00",
                 available: 1
             },
             {
-                day: "Subota",
+                day: 6,
                 time: "13:00-14:00",
                 available: 0
             }]
