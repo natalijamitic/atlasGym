@@ -66,9 +66,24 @@ function bookTraining(id, i) {
 
     parent = event.target.parentElement;
     parent.innerHTML = '';
-    //ubaci proveru da li moze da otkaze trening
-    parent.innerHTML =
-        `<button class="btn btn-outline-danger" onclick="cancelTraining(${id},${i})">Otkaži</button>`;
+    button = '';
+    let today = new Date(); today = today.getDay(); today = (today + 7) % 8;
+    let time = new Date();
+    let trainingDay = (workouts[id-1].trainings[i].day + 7) % 8;
+    if(today == trainingDay) {
+        let hours1, hours2, min1, min2;
+        hours1 = time.getHours(); hours2 = workouts[id-1].trainings[i].time.slice(0,2);
+        min1 = time.getMinutes(); min2 = workouts[id-1].trainings[i].time.slice(3,5);
+        let time2 = new Date();
+        time2.setHours(hours2); time2.setMinutes(min2); time2.setSeconds(0);
+        if((time2-time)/60/1000 > 30)
+            button = `<button class="btn btn-outline-danger" onclick="cancelTraining(${id},${i})">Otkaži</button>`;
+        else button = '';
+    } else if(today > trainingDay)
+        button = '';
+    else button = `<button class="btn btn-outline-danger" onclick="cancelTraining(${id},${i})">Otkaži</button>`;
+
+    parent.innerHTML = button;
 }
 
 function cancelTraining(id, ix) {

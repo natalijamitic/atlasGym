@@ -35,7 +35,7 @@ if(sessionStorage.getItem("workouts") === null) {
     
             trainings: [{
                 day: 1,
-                time: "20:00-21:00",
+                time: "10:30-11:00",
                 available: 1
             },
             {
@@ -45,7 +45,7 @@ if(sessionStorage.getItem("workouts") === null) {
             },
             {
                 day: 3,
-                time: "17:00-18:00",
+                time: "10:30-11:00",
                 available: 3
             },
             {
