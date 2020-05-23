@@ -35,7 +35,8 @@
 
 
     <link rel="stylesheet" href="../assets/css/custom.css">
-
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/profile.js"></script>
     <title>Atlas Gym - Moj Nalog</title>
 
 
@@ -43,7 +44,7 @@
 
 </head>
 
-<body>
+<body onload="populateProfileWithBookedTrainings()">
 
     <div class="header fixed-top scrolled">
 
@@ -268,110 +269,9 @@
                                     <div class="col-12">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <div class="row mb-5 ml-0">
-                                                    <div class="col-lg-4 col-md-6 mb-5">
-                                                        <div class="card bg-dark text-white">
-                                                            <img class="img-fluid" src="../assets/imgs/pic1.jpg" alt="">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">
-                                                                    Joga Starter
-                                                                </h5>
-                                                                <p>Trajanje: 30min</p>
-                                                                <p>Tezina: 2</p>
-
-
-                                                                <div class="text-center">
-                                                                    <button
-                                                                        class="btn btn-outline-warning trening mb-3">Ponedeljak
-                                                                        20:00-21:00</button>
-                                                                    <br>
-                                                                    <a href="#"
-                                                                        class="btn btn-warning view zak">Otkaži</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 mb-5">
-                                                        <div class="card bg-dark text-white">
-                                                            <img class="img-fluid" src="../assets/imgs/woman.jpg"
-                                                                alt="">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">
-                                                                    Joga Ocajna Domacica
-                                                                </h5>
-                                                                <p>Trajanje: 42min</p>
-                                                                <p>Tezina: 4</p>
-                                                                <div class="text-center">
-                                                                    <button
-                                                                        class="btn btn-outline-warning trening mb-3">Sreda
-                                                                        18:00-18:45</button>
-                                                                    <br>
-                                                                    <a href="#"
-                                                                        class="btn btn-warning view zak">Otkaži</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 mb-5">
-                                                        <div class="card bg-dark text-white">
-                                                            <img class="img-fluid" src="../assets/imgs/pic2.jpg" alt="">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">
-                                                                    Joga Guru
-                                                                </h5>
-                                                                <p>Trajanje: 60min</p>
-                                                                <p>Tezina: 5</p>
-                                                                <div class="text-center">
-                                                                    <button
-                                                                        class="btn btn-outline-warning trening mb-3">Sreda
-                                                                        18:00-18:45</button>
-                                                                    <br>
-                                                                    <a href="#"
-                                                                        class="btn btn-warning view zak">Otkaži</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 mb-5">
-                                                        <div class="card bg-dark text-white">
-                                                            <img class="img-fluid" src="../assets/imgs/pic1.jpg" alt="">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">
-                                                                    Joga Starter
-                                                                </h5>
-                                                                <p>Trajanje: 30min</p>
-                                                                <p>Tezina: 2</p>
-                                                                <div class="text-center">
-                                                                    <button
-                                                                        class="btn btn-outline-warning trening mb-3">Sreda
-                                                                        18:00-18:45</button>
-                                                                    <br>
-                                                                    <a href="#"
-                                                                        class="btn btn-warning view zak">Otkaži</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 mb-5">
-                                                        <div class="card bg-dark text-white">
-                                                            <img class="img-fluid" src="../assets/imgs/pic1.jpg" alt="">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">
-                                                                    Joga Starter
-                                                                </h5>
-                                                                <p>Trajanje: 30min</p>
-                                                                <p>Tezina: 2</p>
-                                                                <div class="text-center">
-                                                                    <button
-                                                                        class="btn btn-outline-warning trening mb-3">Sreda
-                                                                        18:00-18:45</button>
-                                                                    <br>
-                                                                    <a href="#"
-                                                                        class="btn btn-warning view zak">Otkaži</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <div class="row mb-5 ml-0" id="bookedTrainings">
+                                                    
+                                                    
                                                 </div>
                                             </div>
                                         </div>

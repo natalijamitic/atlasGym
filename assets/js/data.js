@@ -586,6 +586,11 @@ if(sessionStorage.getItem("workouts") === null) {
                 day: 6,
                 time: "13:00-14:00",
                 available: 0
+            },
+            {
+                day: 0,
+                time: "13:00-14:00",
+                available: 2
             }]
         }
     

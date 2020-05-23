@@ -106,20 +106,25 @@ function cancelTraining(id, ix) {
 function createModal(workout) {
     let html = '';
     let days = ['Nedelja', 'Ponedeljak', 'Utorak', 'Sreda', 'Cetvrtak', 'Petak', 'Subota'];
-    let today = new Date(); today = today.getDay(); today = (today + 7) % 8;
+    let today = new Date(); today = today.getDay();
     let time = new Date();
     for (let i = 0; i < workout.trainings.length; i++) {
         let button = '';
         if (workout.trainings[i].available > 0)
             button = `<button class="btn btn-outline-success" onclick="bookTraining(${workout.id},${i})">Zakaži</button>`;
-        let trainingDay = (workout.trainings[i].day + 7) % 8;
+        let trainingDay = workout.trainings[i].day;
+        if(today == 0) today = 7;
+        if(trainingDay == 0) trainingDay = 7;
+        //console.log('today ', today, 'trainingDay ', trainingDay);
         if(today > trainingDay) button = '';
 
         let hours1, hours2, min1, min2;
         hours1 = time.getHours(); hours2 = workout.trainings[i].time.slice(0,2);
         min1 = time.getMinutes(); min2 = workout.trainings[i].time.slice(3,5);
-        if(hours1 > hours2 || (hours1 == hours2 && min1 > min2))
+        if((hours1 > hours2 || (hours1 == hours2 && min1 > min2)) && (today == trainingDay))
             button = '';
+        if(today == 7) today = 0;
+        if(trainingDay == 7) trainingDay = 0;
         
         html = html + `
         <tr>
