@@ -743,18 +743,37 @@ h2.inline {
 
 /******************************************************/
 
+.tooltip-wrapper {
+  display: none;
+  margin-top: 50px; 
+}
+
+.tooltip-wrapper .btn[disabled] {
+  pointer-events: none;
+}
+
+.tooltip-wrapper.disabled {
+  cursor: not-allowed;
+}
+
 .bestTr.singleTr {
   color: white;
 }
 
-/* @media (min-width: 768px) {
-  .carousel-multi-item-2 .col-md-3 {
-    float: left;
-    width: 25%;
-    max-width: 100%; 
-  } 
+#submitComment, #disabledsubmitComment, #submitGrade, #disabledsubmitGrade {
+
 }
-  
+span.hideSmall {
+  color: white;
+}
+
+@media (max-width: 575px) {
+  span.hideSmall {
+    display: none;
+  }
+}
+ 
+/*
 .carousel-multi-item-2 .card img {
   border-radius: 2px; 
 } */

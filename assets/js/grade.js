@@ -55,7 +55,7 @@ function updateAttendedTrainings() {
             hours = training.time.slice(0,2);
             min = training.time.slice(3,5);
             let time2 = new Date();
-            time2.setHours(hours2); time2.setMinutes(min2); time2.setSeconds(0);
+            time2.setHours(hours); time2.setMinutes(min); time2.setSeconds(0);
 
             if(time2 < time) {
                 if(!user.attendedTrainings.includes(user.booked[i].workoutId)) {
@@ -66,4 +66,25 @@ function updateAttendedTrainings() {
         }
     }
     memorize();
+}
+
+function checkAllowed() {
+    $('.tooltip-wrapper').tooltip({position: "bottom"});
+
+    id = getParameterByName('id') - 1;
+    workout = workouts[id];
+
+    updateAttendedTrainings();
+    if(!user.attendedTrainings.includes(id+1)) {
+        $('.tooltip-wrapper').tooltip({position: "bottom"});
+        $('.tooltip-wrapper').css('display', 'inline-block');
+        $("#submitComment").css('display', 'none');
+        $("#submitGrade").css('display', 'none');
+    }
+    else {
+        $("#submitComment").css('display', 'initial');
+        $("#submitGrade").css('display', 'initial');
+        $('.tooltip-wrapper').css('display', 'none');
+    }
+
 }
