@@ -40,6 +40,7 @@
 
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/atlas.js"></script>
+    <script src="../assets/js/grade.js"></script>
 
 </head>
 
@@ -423,7 +424,7 @@
                                                     <div class="row mt-5">
                                                         <div class="col-12">
                                                             <div class="card card-body bg-secondary">
-                                                                <form action="#" method="post" class="form-horizontal"
+                                                                <form onsubmit="addNewComment()" method="post" class="form-horizontal"
                                                                     id="commentForm" role="form">
                                                                     <div class="form-group">
                                                                         <label for="addComment"
@@ -460,21 +461,21 @@
                                                     <div class="row mt-5">
                                                         <div class="col-12">
                                                             <div class="card card-body bg-secondary">
-                                                                <form action="#" method="post" class="form-horizontal"
+                                                                <form onsubmit="gradeTraining()" method="post" class="form-horizontal"
                                                                     id="gradeForm" role="form">
                                                                     <div class="form-group">
                                                                         <label for="grade"
                                                                             class="col-sm-2 control-label">Ocena</label>
                                                                         <div class="col-sm-10">
                                                                             <input type="number" class="form-control"
-                                                                                name="grade" id="grade" min="1"
+                                                                                name="grade" id="grade-input" min="1"
                                                                                 max="10">
                                                                         </div>
                                                                         <br>
                                                                         <br>
                                                                         <div class="col-sm-offset-2 col-sm-10">
                                                                             <button class="btn btn-dark text-uppercase"
-                                                                                type="submit" id="submitGrade"><span
+                                                                                type="submit" id="submitGrade" onclick="gradeTraining()"><span
                                                                                     class="fab fa-telegram-plane"></span>
                                                                                 &nbsp;Oceni</button>
                                                                         </div>

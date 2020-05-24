@@ -601,6 +601,15 @@ if(sessionStorage.getItem("workouts") === null) {
 }
 
 if(sessionStorage.getItem('user') === null) {
+    /*
+        booked niz je u formatu:
+        {
+            'workoutId': id,
+            'trainingIndex': i
+        }
+
+        workoutId je id u data nizu, znaci da je za 1 veci od indeksa u workouts nizu
+    */
     user = {
         attendedTrainings: [1, 3, 4, 7, 11],
         booked: []
