@@ -36,32 +36,14 @@ function addNewComment() {
 }
 
 function updateAttendedTrainings() {
-    let today = (new Date()).getDay();
-    if(today == 0) today = 7;
-    let time = new Date();
-
     for(let i = 0; i < user.booked.length; i++) {
         training = workouts[user.booked[i].workoutId-1].trainings[user.booked[i].trainingIndex];
-        let trainingDay = training.day;
-        if(trainingDay == 0) trainingDay = 7;
-        if(today > trainingDay) {
+
+        let minutes = minutesToTraining(training);
+        if(minutes <= 0) {
             if(!user.attendedTrainings.includes(user.booked[i].workoutId)) {
                 user.attendedTrainings.push(user.booked[i].workoutId);
                 user.booked.splice(i, 1);
-            }
-        } else if(today == trainingDay) {
-            let hours, min;
-
-            hours = training.time.slice(0,2);
-            min = training.time.slice(3,5);
-            let time2 = new Date();
-            time2.setHours(hours2); time2.setMinutes(min2); time2.setSeconds(0);
-
-            if(time2 < time) {
-                if(!user.attendedTrainings.includes(user.booked[i].workoutId)) {
-                    user.attendedTrainings.push(user.booked[i].workoutId);
-                    user.booked.splice(i, 1);
-                }
             }
         }
     }

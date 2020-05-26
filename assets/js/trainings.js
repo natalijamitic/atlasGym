@@ -22,15 +22,13 @@ function populateBookTrainings() {
     let container = document.getElementById('listTrainings');
     container.innerHTML = '';
     let row = document.createElement('div');
+    row.setAttribute('class', 'row mb-5 ml-4');
     for (let i = 0; i < workouts.length; i++) {
-        //if(!filter[workouts[i].category]) continue;
         let html = createWorkoutPreview(workouts[i]);
-        row.setAttribute('class', 'row mb-5 ml-4');
         row.innerHTML = row.innerHTML + html;
     }
     container.appendChild(row);
     for (let i = 0; i < workouts.length; i++) {
-        //if(!filter[workouts[i].category]) continue;
         document.body.innerHTML = document.body.innerHTML + createModal(workouts[i]);
     }
 }
@@ -67,21 +65,11 @@ function bookTraining(id, i) {
     parent = event.target.parentElement;
     parent.innerHTML = '';
     button = '';
-    let today = new Date(); today = today.getDay(); today = (today + 7) % 8;
-    let time = new Date();
-    let trainingDay = (workouts[id-1].trainings[i].day + 7) % 8;
-    if(today == trainingDay) {
-        let hours1, hours2, min1, min2;
-        hours1 = time.getHours(); hours2 = workouts[id-1].trainings[i].time.slice(0,2);
-        min1 = time.getMinutes(); min2 = workouts[id-1].trainings[i].time.slice(3,5);
-        let time2 = new Date();
-        time2.setHours(hours2); time2.setMinutes(min2); time2.setSeconds(0);
-        if((time2-time)/60/1000 > 30)
-            button = `<button class="btn btn-outline-danger" onclick="cancelTraining(${id},${i})">Otkaži</button>`;
-        else button = '';
-    } else if(today > trainingDay)
-        button = '';
-    else button = `<button class="btn btn-outline-danger" onclick="cancelTraining(${id},${i})">Otkaži</button>`;
+
+    let minutes = minutesToTraining(workouts[id-1].trainings[i]);
+    if(minutes > 30)
+        button = `<button class="btn btn-outline-danger" onclick="cancelTraining(${id},${i})">Otkaži</button>`;
+    else button = '';
 
     parent.innerHTML = button;
 }
@@ -108,23 +96,22 @@ function createModal(workout) {
     let days = ['Nedelja', 'Ponedeljak', 'Utorak', 'Sreda', 'Cetvrtak', 'Petak', 'Subota'];
     let today = new Date(); today = today.getDay();
     let time = new Date();
+    let hasBooked = false;
+    let button = '';
     for (let i = 0; i < workout.trainings.length; i++) {
-        let button = '';
-        if (workout.trainings[i].available > 0)
+        button = '';
+        hasBooked = false;
+        for(let j = 0; j < user.booked.length; j++) {
+            if(user.booked[j].workoutId == workout.id && user.booked[j].trainingIndex == i) {
+                hasBooked = true;
+                break;
+            }
+        }
+        let minutes = minutesToTraining(workout.trainings[i]);
+        if(minutes > 1 && workout.trainings[i].available > 0 && !hasBooked)
             button = `<button class="btn btn-outline-success" onclick="bookTraining(${workout.id},${i})">Zakaži</button>`;
-        let trainingDay = workout.trainings[i].day;
-        if(today == 0) today = 7;
-        if(trainingDay == 0) trainingDay = 7;
-        //console.log('today ', today, 'trainingDay ', trainingDay);
-        if(today > trainingDay) button = '';
-
-        let hours1, hours2, min1, min2;
-        hours1 = time.getHours(); hours2 = workout.trainings[i].time.slice(0,2);
-        min1 = time.getMinutes(); min2 = workout.trainings[i].time.slice(3,5);
-        if((hours1 > hours2 || (hours1 == hours2 && min1 > min2)) && (today == trainingDay))
-            button = '';
-        if(today == 7) today = 0;
-        if(trainingDay == 7) trainingDay = 0;
+        else if(minutes > 30 && hasBooked)
+            button = `<button class="btn btn-outline-danger" onclick="cancelTraining(${workout.id},${i})">Otkaži</button>`;
         
         html = html + `
         <tr>

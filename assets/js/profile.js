@@ -6,21 +6,10 @@ function populateProfileWithBookedTrainings() {
         div.setAttribute('class', 'col-lg-4 col-md-6 mb-5');
         let workout = workouts[user.booked[i].workoutId-1];
         
-        let button = `<a href="#" class="btn btn-warning view zak" onclick="cancelProfileTraining(${user.booked[i].workoutId},${user.booked[i].trainingIndex})">Otkaži</a>`;
-        let today = new Date(); today = today.getDay();
-        let time = new Date();
-        let trainingDay = workout.trainings[user.booked[i].trainingIndex].day;
-        if(today == 0) today = 7;
-        if(trainingDay == 0) trainingDay = 7;
-        if(today > trainingDay) button = '';
-
-        let hours1, hours2, min1, min2;
-        hours1 = time.getHours(); hours2 = workout.trainings[user.booked[i].trainingIndex].time.slice(0,2);
-        min1 = time.getMinutes(); min2 = workout.trainings[user.booked[i].trainingIndex].time.slice(3,5);
-        if((hours1 > hours2 || (hours1 == hours2 && min1 > min2)) && (today == trainingDay))
-            button = '';
-        if(today == 7) today = 0;
-        if(trainingDay == 7) trainingDay = 0;
+        let button = `<a href="javascript:;" class="btn btn-warning view zak" onclick="cancelProfileTraining(${user.booked[i].workoutId},${user.booked[i].trainingIndex})">Otkaži</a>`;
+        
+        let minutes = minutesToTraining(workout.trainings[user.booked[i].trainingIndex]);
+        if(minutes <= 30) button = '';
 
         div.innerHTML = `
         <div class="card bg-dark text-white">
@@ -59,5 +48,5 @@ function cancelProfileTraining(id, ix) {
 
     memorize();
 
-    trainingCard.remove();    
+    trainingCard.parentElement.style.display = 'none';    
 }
