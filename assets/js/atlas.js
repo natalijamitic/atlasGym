@@ -220,10 +220,10 @@ $(document).on('change', 'select', function () {
 function makePDF(type) {
 
     let text = [
-        ["Uspešno ste rezervisali termin za", ", \tdana   ", "Podaci:", "puno ime:",
+        ["Uspešno ste rezervisali termin za", ", \tdana   ", "Podaci:", "ime:", "prezime:",
             "poruka:", "Vidimo se na našoj lokaciji Bregovita 11, 11080 Zemun!",
             "Vaš Atlas Tim"],
-        ["You have successfully booked", ", \ton   ", "Personal info:", "full name:",
+        ["You have successfully booked", ", \ton   ", "Personal info:", "first name:", "last name:",
             "message:", "See you at our location at Bregovita 11, 11080 Zemun!",
             "Your Atlas Team"]
     ]
@@ -241,19 +241,22 @@ function makePDF(type) {
     doc.text(20, 80, text[lang][i++])
 
     doc.text(30, 90, text[lang][i++])
-    doc.text(85, 90, $("#inputName").val() + " " + $("#inputLastName").val())
+    doc.text(85, 90, $("#inputName").val().substring(0, 28) + "...", { maxWidth: "96" });
 
-    doc.text(30, 100, "email:")
-    doc.text(85, 100, $("#inputEmail").val())
+    doc.text(30, 100, text[lang][i++])
+    doc.text(85, 100, $("#inputLastName").val().substring(0, 28) + "...", { maxWidth: "96" });
 
-    doc.text(30, 110, "tel:");
-    doc.text(85, 110, $("#inputPhone").val())
+    doc.text(30, 110, "email:")
+    doc.text(85, 110, $("#inputEmail").val())
+
+    doc.text(30, 120, "tel:");
+    doc.text(85, 120, $("#inputPhone").val().replace(/\s/g, ''))
 
     msg = $("#inputText").val()
     msg = (msg == "") ? "/" : msg
-    doc.text(30, 120, text[lang][i++])
+    doc.text(30, 130, text[lang][i++])
     msg = msg.length > 270 ? (msg.substring(0, 267) + " ...") : msg;
-    doc.text(85, 120, msg, { maxWidth: "96" })
+    doc.text(85, 130, msg, { maxWidth: "96" })
 
     doc.text(30, 200, text[lang][i++]);
     doc.text(130, 230, text[lang][i++])
@@ -293,12 +296,13 @@ function book() {
         lastName = $("#inputLastName").val()
         email = $("#inputEmail").val()
         phone = $("#inputPhone").val()
+        phone = phone.replace(/\s/g, ''); //bez razmaka
         date = $("#inputDate").val()
         msg = $("#inputText").val()
 
         patternName = /^([A-Za-z]|[A-Za-z]+(\ |\'|\-)?(([A-Za-z]+)((\ |\'|\-))?)*[A-Za-z]+)$/g              //sme 1 slovo, sme vise reci, sme -', izmedju " ", "-", "'" moraju da se nadju odmah slova
         if (!name.match(patternName) || !lastName.match(patternName)) {
-            alert("Nevalidan unos imena.")
+            alert(lang ? "Invalid name entry" : "Nevalidan unos imena.")
             resetInput();
             return;
         }
@@ -306,23 +310,23 @@ function book() {
         patternEmail = /^[a-zA-Z]\w*@[a-zA-Z]\w*([-\.]\w+)*(\.[a-zA-Z]{2,3})+$/g
 
         if (!email.match(patternEmail)) {
-            alert("Nevalidan unos email adrese.")
+            alert(lang ? "Invalid email entry" : "Nevalidan unos email adrese.")
             resetInput();
             return;
         }
 
-        patternPhone = /^(\d){3}(\ )?(\d){3}(\ )?(\d){3,4}$/g
+        patternPhone = /^(06)(\d)(\d){6,7}$/g
         if (!phone.match(patternPhone)) {
-            alert("Nevalidan unos telefona.")
+            alert(lang ? "Invalid phone entry" : "Nevalidan unos telefona.")
             resetInput();
             return;
         }
 
         makePDF(type);
-        alert("Uspesno zakazano. IMA PDFA");        //za test
+        alert(lang ? "Successfully booked." : "Uspesno zakazano.");        //za test
     }
     else {
-        alert("Uspesno zakazano. NEMA PDFA");       //za test
+        alert(lang ? "Successfully booked." : "Uspesno zakazano.");       //za test
     }
 }
 /********************************/

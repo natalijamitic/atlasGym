@@ -1,30 +1,34 @@
 function populateProfileWithBookedTrainings() {
     let container = document.getElementById('bookedTrainings');
-    let days = ['Nedelja', 'Ponedeljak', 'Utorak', 'Sreda', 'Cetvrtak', 'Petak', 'Subota'];
+    let days = [['Nedelja', 'Ponedeljak', 'Utorak', 'Sreda', 'Četvrtak', 'Petak', 'Subota'],
+                ['sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']];
     for(let i = 0; i < user.booked.length; i++) {
         let div = document.createElement('div');
         div.setAttribute('class', 'col-lg-4 col-md-6 mb-5');
         let workout = workouts[user.booked[i].workoutId-1];
         
-        let button = `<a href="javascript:;" class="btn btn-warning view zak" onclick="cancelProfileTraining(${user.booked[i].workoutId},${user.booked[i].trainingIndex})">Otkaži</a>`;
+        let btnText = ["Otkaži", "Cancel"]
+        let button = `<a href="javascript:;" class="btn btn-warning view zak" onclick="cancelProfileTraining(${user.booked[i].workoutId},${user.booked[i].trainingIndex})">${btnText[lang]}</a>`;
         
         let minutes = minutesToTraining(workout.trainings[user.booked[i].trainingIndex]);
         if(minutes <= 30) button = '';
 
+        let text = [["Trajanje", "Težina"], ["Duration", "Level"]]
+        let cnt = 0;
         div.innerHTML = `
-        <div class="card bg-dark text-white">
+        <div class="card h-100 bg-dark text-white">
             <img class="img-fluid" src="${workout.profile}" alt="">
             <div class="card-body">
                 <h5 class="card-title">
                     ${workout.category}&nbsp;${workout.name}
                 </h5>
-                <p>Trajanje: ${workout.duration}</p>
-                <p>Tezina: ${workout.level}</p>
-
-
-                <div class="text-center">
+                <p>${text[lang][cnt++]}: ${workout.duration}</p>
+                <p>${text[lang][cnt++]}: ${workout.level}</p>
+            </div>
+            <div class="card-footer mb-3">
+                <div class="text-center mt-3">
                     <button class="btn btn-outline-warning trening mb-3">
-                        ${days[workout.trainings[user.booked[i].trainingIndex].day]}&nbsp;${workout.trainings[user.booked[i].trainingIndex].time}
+                        ${days[lang][workout.trainings[user.booked[i].trainingIndex].day]}&nbsp;${workout.trainings[user.booked[i].trainingIndex].time}
                     </button>
                     <br>
                     ${button}
