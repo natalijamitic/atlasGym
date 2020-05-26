@@ -202,7 +202,7 @@
                                                 </small>
                                                 <br>
                                             </div>
-                                            
+
                                             <div class="col-md-6 pt-2">
                                                 <div class="iframe-container">
                                                     <iframe class="img-fluid h-100"
@@ -395,13 +395,15 @@
                                                         aria-selected="true">Komentari</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" id="new-tab" data-toggle="tab" href="#new"
-                                                        role="tab" aria-controls="new" aria-selected="false">Dodaj
+                                                    <a onclick="checkAllowed()" class="nav-link" id="new-tab"
+                                                        data-toggle="tab" href="#new" role="tab" aria-controls="new"
+                                                        aria-selected="false">Dodaj
                                                         komentar</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" id="grade-tab" data-toggle="tab" href="#grade"
-                                                        role="tab" aria-controls="grade" aria-selected="false">Oceni</a>
+                                                    <a onclick="checkAllowed()" class="nav-link" id="grade-tab"
+                                                        data-toggle="tab" href="#grade" role="tab" aria-controls="grade"
+                                                        aria-selected="false">Oceni</a>
                                                 </li>
                                             </ul>
 
@@ -424,30 +426,42 @@
                                                     <div class="row mt-5">
                                                         <div class="col-12">
                                                             <div class="card card-body bg-secondary">
-                                                                <form onsubmit="addNewComment()" method="post" class="form-horizontal"
-                                                                    id="commentForm" role="form">
+                                                                <form onsubmit="addNewComment()" method="post"
+                                                                    class="form-horizontal" id="commentForm"
+                                                                    role="form">
                                                                     <div class="form-group">
                                                                         <label for="addComment"
-                                                                            class="col-sm-2 control-label">Komentar</label>
-                                                                        <div class="col-sm-10">
+                                                                            class="col-12 control-label">Komentar</label>
+                                                                        <div class="col-12">
                                                                             <textarea class="form-control"
                                                                                 name="addComment" id="addComment"
                                                                                 rows="5"></textarea>
                                                                         </div>
                                                                         <br>
                                                                         <label for="username"
-                                                                            class="col-sm-2 control-label">Ime</label>
-                                                                        <div class="col-sm-10">
+                                                                            class="col-12 control-label">Ime</label>
+                                                                        <div class="col-12">
                                                                             <input type="text" class="form-control"
                                                                                 name="username" id="username">
                                                                         </div>
                                                                         <br>
                                                                         <br>
-                                                                        <div class="col-sm-offset-2 col-sm-10">
+                                                                        <div class="col-offset-2 col-10">
+                                                                            <div class="tooltip-wrapper"
+                                                                                data-title="Ne možete komentarisati trening koji niste posetili.">
+                                                                                <button disabled
+                                                                                    class="btn btn-dark text-uppercase"
+                                                                                    type="submit"
+                                                                                    id="disabledsubmitComment"><span
+                                                                                        class="fab fa-telegram-plane"></span>
+                                                                                    <span class="hideSmall">&nbsp;Ostavi
+                                                                                        komentar</span></button>
+                                                                            </div>
                                                                             <button class="btn btn-dark text-uppercase"
                                                                                 type="submit" id="submitComment"><span
                                                                                     class="fab fa-telegram-plane"></span>
-                                                                                &nbsp;Ostavi komentar</button>
+                                                                                <span class="hideSmall">&nbsp;Ostavi
+                                                                                    komentar</span></button>
                                                                         </div>
                                                                     </div>
                                                                 </form>
@@ -461,23 +475,35 @@
                                                     <div class="row mt-5">
                                                         <div class="col-12">
                                                             <div class="card card-body bg-secondary">
-                                                                <form onsubmit="gradeTraining()" method="post" class="form-horizontal"
-                                                                    id="gradeForm" role="form">
+                                                                <form onsubmit="gradeTraining()" method="post"
+                                                                    class="form-horizontal" id="gradeForm" role="form">
                                                                     <div class="form-group">
                                                                         <label for="grade"
-                                                                            class="col-sm-2 control-label">Ocena</label>
-                                                                        <div class="col-sm-10">
+                                                                            class="col-12 control-label">Ocena</label>
+                                                                        <div class="col-12">
                                                                             <input type="number" class="form-control"
                                                                                 name="grade" id="grade-input" min="1"
                                                                                 max="10">
                                                                         </div>
                                                                         <br>
                                                                         <br>
-                                                                        <div class="col-sm-offset-2 col-sm-10">
+                                                                        <div class="col-offset-2 col-10">
+                                                                            <div class="tooltip-wrapper"
+                                                                                data-title="Ne možete ocenjivati trening koji niste posetili.">
+                                                                                <button disabled
+                                                                                    class="btn btn-dark text-uppercase"
+                                                                                    type="submit"
+                                                                                    id="disabledsubmitGrade"><span
+                                                                                        class="fab fa-telegram-plane"></span>
+                                                                                    <span
+                                                                                        class="hideSmall">&nbsp;Oceni</span></button>
+                                                                            </div>
                                                                             <button class="btn btn-dark text-uppercase"
-                                                                                type="submit" id="submitGrade" onclick="gradeTraining()"><span
+                                                                                type="submit" id="submitGrade"
+                                                                                onclick="gradeTraining()"><span
                                                                                     class="fab fa-telegram-plane"></span>
-                                                                                &nbsp;Oceni</button>
+                                                                                <span
+                                                                                    class="hideSmall">&nbsp;Oceni</span></button>
                                                                         </div>
                                                                     </div>
                                                                 </form>

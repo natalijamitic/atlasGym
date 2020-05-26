@@ -49,3 +49,24 @@ function updateAttendedTrainings() {
     }
     memorize();
 }
+
+function checkAllowed() {
+    $('.tooltip-wrapper').tooltip({position: "bottom"});
+
+    id = getParameterByName('id') - 1;
+    workout = workouts[id];
+
+    updateAttendedTrainings();
+    if(!user.attendedTrainings.includes(id+1)) {
+        $('.tooltip-wrapper').tooltip({position: "bottom"});
+        $('.tooltip-wrapper').css('display', 'inline-block');
+        $("#submitComment").css('display', 'none');
+        $("#submitGrade").css('display', 'none');
+    }
+    else {
+        $("#submitComment").css('display', 'initial');
+        $("#submitGrade").css('display', 'initial');
+        $('.tooltip-wrapper').css('display', 'none');
+    }
+
+}
