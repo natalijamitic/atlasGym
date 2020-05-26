@@ -1,261 +1,322 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../assets/css/custom.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
 
-    <title>Atlas Gym</title>
+  <title>Atlas Gym</title>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
-    <script>
-      $(document).ready(function() {
 
-      	var $nav = $(".fixed-top");
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/atlas.js"></script>
 
-        $nav.toggleClass('scrolled', $(this).scrollTop() > 2.5 * $nav.height());
+  <script>
+    $(document).ready(function () {
 
-        $(document).scroll(function(){
-          var $nav = $(".fixed-top");
+      var $nav = $(".fixed-top");
 
-          $nav.toggleClass('scrolled', $(this).scrollTop() > 2.5 * $nav.height());
+      $nav.toggleClass('scrolled', $(this).scrollTop() > 1.5 * $nav.height());
 
-        })
+      $(document).scroll(function () {
+        var $nav = $(".fixed-top");
+
+        $nav.toggleClass('scrolled', $(this).scrollTop() > 1.5 * $nav.height());
+
       })
+    })
 
-    </script>
+  </script>
 
-  </head>
-  <body>
 
-    <div class="header fixed-top">
+</head>
 
-      <div class="container col-12 text-white blck">
-        <div class="text-center px-md-0">
-          <div class="row d-flex">
-            <div class="col-md-4">
-              <img src="../assets/icons/phone.svg" alt="" style="width:15px;">
-              +381 64 321 0990
-            </div>
-            <div class="col-md-4">
-              <i class="fab fa-telegram-plane"></i> info@atlas.com
-            </div>
-            <div class="col-md-4">
-              <div class="row">
-                <div class="offset-md-4 col-md-1">
-                  <i class="fab fa-facebook-f"></i>
-                </div>
-                <div class="col-md-1">
-                  <i class="fab fa-instagram"></i>
-                </div>
-                <div class="col-md-1">
-                  <i class="fab fa-youtube"></i>
-                </div>
-                <div class="offset-md-2 col-md-1">
-                  <a href="../srb/index.html"><img class="flag" src="../assets/imgs/lang/serbia.png" alt=""></a>
-                </div>
-                <div class="col-md-1">
-                  <a href="../eng/index.html"><img class="flag" src="../assets/imgs/lang/uk.png" alt=""></a>
-                </div>
+<body onload="setEnglish(); populateIndex();">
+
+  <div class="header fixed-top">
+
+    <div class="container col-12 text-white blck">
+      <div class="text-center px-md-0">
+        <div class="row d-flex">
+          <div class="col-md-4">
+            <img src="../assets/icons/phone.svg" alt="" width="15px">
+            +381 64 321 0990
+          </div>
+          <div class="col-md-4">
+            <i><a class="navIcon fab fa-telegram-plane" href="mailto:info@atlas.com"> info@atlas.com</a></i>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="offset-md-4 col-md-1">
+                <a class="navIcon" href="https://www.facebook.com/atlasgyms/"><i class="fab fa-facebook-f"></i></a>
+              </div>
+              <div class="col-md-1">
+                <a class="navIcon" href="https://www.instagram.com/atlasgymsoton/"><i class="fab fa-instagram"></i></a>
+              </div>
+              <div class="col-md-1">
+                <a class="navIcon" href="https://www.youtube.com/channel/UCMEUwmRrtLWa4dZ-2HMqIXw"><i
+                    class="fab fa-youtube"></i></a>
+              </div>
+              <div class="offset-md-2 col-md-1">
+                <a class="parentFlag" href="../srb/index.html"><img class="flag" src="../assets/imgs/lang/serbia.png" alt=""></a>
+              </div>
+              <div class="col-md-1">
+                <a class="parentFlag" href="#"><img class="flag" src="../assets/imgs/lang/uk.png"
+                    alt=""></a>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark trn mt-3">
-        <a class="navbar-brand" href="#">
-          <img class="logoW" src="../assets/imgs/logo/logoY.png" alt="">
-          <img class="logoB" src="../assets/imgs/logo/logoBY.png" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="">
-            <i class="fas fa-bars" style="color: #fcd307; font-size: 28px;"></i>
-          </span>
-        </button>
-        <div class="collapse navbar-collapse ml-5" id="navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark trn mt-3">
+      <a class="navbar-brand" href="#">
+        <img class="logoW" src="../assets/imgs/logo/logoY.png" alt="">
+        <img class="logoB" src="../assets/imgs/logo/logoBY.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="">
+          <i class="fas fa-bars toggleNavIcon"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse ml-5" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Homepage</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="treninzi.html">Workouts</a>
+              <a class="dropdown-item" href="nutricionista.html">Nutritionist</a>
+              <a class="dropdown-item" href="masaze.html">Massages</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+        </ul>
+        <div class="ml-auto mr-5">
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Homepage<span class="sr-only">(current)</span></a>
+            <li class="mrt nav-item">
+              <a class="nav-link" href="zakazi-trening.html">Book Workout</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Services
-              </a>
-              <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Workouts</a>
-                <a class="dropdown-item" href="#">Nutritionist</a>
-                <a class="dropdown-item" href="#">Massages</a>
-              </div>
+            <li class="mrt nav-item">
+              <a class="nav-link" href="nalog.html">My Profile</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+            <li class="nav-item lang">
+              <a class="nav-link" href="../srb/index.html"><img class="flag" src="../assets/imgs/lang/serbia.png" alt=""></a>
+            </li>
+            <li class="nav-item lang">
+              <a class="nav-link" href="#"><img class="flag" src="../assets/imgs/lang/uk.png"
+                  alt=""></a>
             </li>
           </ul>
-          <div class="ml-auto mr-5">
-            <ul class="navbar-nav">
-              <li class="mrt nav-item">
-                <a class="nav-link" href="#">Book Workouts</a>
-              </li>
-              <li class="mrt nav-item">
-                <a class="nav-link" href="#">My Profile</a>
-              </li>
-            
-
-              <li class="nav-item lang">
-                <a class="nav-link" href="../srb/index.html"><img class="flag" src="../assets/imgs/lang/serbia.png" alt=""></a>
-              </li>
-              <li class="nav-item lang">
-                <a class="nav-link" href="../eng/index.html"><img class="flag" src="../assets/imgs/lang/uk.png" alt=""></a>
-              </li>
-            
-
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-    </div>
-
-    <section>
-      <div class="bd-example">
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          </ol>
-          <div class="carousel-inner" onclick="yes()">
-            <div class="carousel-item drk active">
-              <img src="../assets/imgs/biceps.jpg" class="carImg d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h1>ATLAS<span class="strokeme">GYM</span></h1>
-                <h2>Hustle for that muscle</h2>
-              </div>
-            </div>
-            <div class="carousel-item drk" onclick="yes()">
-              <img src="../assets/imgs/woman.jpg" class="carImg d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h1>ATLAS is<span class="strokeme">home</span></h1>
-                <h2>Everyday is booty day</h2>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
       </div>
-    </section>
+    </nav>
 
-<div class="row no-gutters">
-  <div class="col-2 go2back">
-    <div class="ads intro ml-3 mr-3 text-center">
-      <br> <br> <br>
-      <h3>A</h3><h3>D</h3><h3>V</h3><h3>E</h3><h3>R</h3><h3>T</h3><h3>I</h3><h3>S</h3><h3>E</h3><h3>M</h3><h3>E</h3><h3>N</h3><h3>T</h3><h3>S</h3>
-      <br> <br> <br>
-    </div>
   </div>
 
-  <div class="col-8">
-    <section>
-      <div class="container intro">
-        <div class="row">
-          <div class="col-md-6">
-            <h6>Hello!</h6>
-            <h2>Welcome to <span>ATLAS</span>Gym</h2>
-            <p class="font-weight-lighter">
-              <small>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, consequuntur minima quibusdam repudiandae, possimus debitis iusto. Voluptates ea provident quis nobis quae assumenda culpa, autem. Omnis dolores ratione in doloribus consequatur quia amet mollitia libero deleniti eos vero, impedit! Laudantium quos voluptas optio cumque facere debitis. Consectetur, molestias voluptatibus a!
-              </small>
-            </p>
-            <button type="button" name="button" class="btn btn-warning mb-5">Book Workouts</button>
-          </div>
-          <div class="col-md-6">
-            <div class="row mb-3">
-              <div class="col-12">
-                <img src="../assets/imgs/pic0.jpg" alt="">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 mb-3">
-                <img class="img-fluid" src="../assets/imgs/pic1.jpg" alt="">
-              </div>
-              <div class="col-md-4 mb-3">
-                <img class="img-fluid" src="../assets/imgs/pic2.jpg" alt="">
-              </div>
-              <div class="col-md-4 mb-3">
-                <img class="img-fluid" src="../assets/imgs/woman.jpg" alt="">
-              </div>
+  <section>
+    <div class="bd-example">
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item drk active">
+            <img
+              src="https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              class="carImg d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-sm-block">
+              <h1>ATLAS<span class="strokeme">GYM</span></h1>
+              <h2>Hustle for that muscle</h2>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+          <div class="carousel-item drk">
+            <img src="../assets/imgs/woman.jpg" class="carImg d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-sm-block">
+              <h1>ATLAS je<span class="strokeme">dom</span></h1>
+              <h2>Everyday is booty day</h2>
+            </div>
+          </div>
 
-    <section>
-      <div class="row pl-2 pr-2">
-        <div class="col-md-12 bestTr pt-5 pb-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 text-center pt-4">
-                <h2>Our <span>best</span> workouts:</h2>
+          <div class="carousel-item drk">
+            <img src="../assets/imgs/biceps.jpg" class="carImg d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-sm-block">
+              <h1>ATLAS je<span class="strokeme">snaga</span></h1>
+              <h2>Strong as an ox</h2>
+            </div>
+          </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="row no-gutters">
+    <div class="col-2 go2back">
+      <div class="ads intro ml-3 mr-3 text-center">
+        &nbsp;
+        <h3>A</h3>
+        <h3>D</h3>
+        <h3>V</h3>
+        <h3>E</h3>
+        <h3>R</h3>
+        <h3>T</h3>
+        <h3>I</h3>
+        <h3>S</h3>
+        <h3>E</h3>
+        <h3>M</h3>
+        <h3>E</h3>
+        <h3>N</h3>
+        <h3>T</h3>
+      </div>
+
+    </div>
+
+    <div class="col-8">
+      <section>
+        <div class="container intro">
+          <div class="row">
+            <div class="col-12 text-center mt-4">
+              <h6>Hello!</h6>
+              <h2>Welcome to <span>ATLAS</span>Gym</h2>
+              <br> <br>
+            </div>
+
+            <div class="col-lg-6 biggerFont">
+
+
+              If you want to <h2 class="inline">lose weight</h2>, <h2 class="inline">build muscles</h2> or simply <h2
+                class="inline">stay fit ?</h2>
+              <br> <br>
+              This is the right place. Almost 5 years now, we are making your face smile and your abs sweat.
+              You just need to come and relax, we will take care od the rest.
+
+
+              <br> <br>
+              Everyday <h2 class="inline">from <span class="inline">6am</span> to <span class="inline">11pm</span
+                  class="inline"></h2>.
+              Let's get physical.
+
+              <div class="text-center mt-5 mb-5">
+                <h2 class="smallerFont mb-1">What are you waiting for?</h2>
+                <button type="button" name="button" class="mt-0 styled btn btn-warning viewMax mb-5"
+                  onclick="window.open('zakazi-trening.html');"><strong>Book Workout!</strong></button>
+
               </div>
             </div>
-            <div class="row mt-5 mb-5">
-              <div class="col-md-4 mb-5">
-                <div class="card bg-dark text-white">
+
+            <div class="col-lg-6">
+              <div class="row mb-3">
+                <div class="col-12 col-md-6 col-lg-12 mb-3">
+                  <img src="../assets/imgs/pic0.jpg" alt="">
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                   <img class="img-fluid" src="../assets/imgs/pic1.jpg" alt="">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Workout 1
-                    </h5>
-                    <p>Opis treninga 1, tezina blabla bla bla</p>
-                    <div class="text-center">
-                      <a href="#" class="btn btn-warning view">View</a>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-4 mb-5">
-                <div class="card bg-dark text-white">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                   <img class="img-fluid" src="../assets/imgs/pic2.jpg" alt="">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Workout 2
-                    </h5>
-                    <p>Opis treninga 2, tezina blabla bla bla</p>
-                    <div class="text-center">
-                      <a href="#" class="btn btn-warning view">View</a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                  <img class="img-fluid" src="../assets/imgs/woman.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row pl-2 pr-2">
+          <div class="col-md-12 bestTr pt-5 pb-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center pt-4">
+                  <h2>Our <span>best</span> workouts:</h2>
+                </div>
+              </div>
+              <div class="row mt-5 mb-5">
+                <div class="col-md-4 mb-5">
+                  <div class="card h-100 bg-dark text-white">
+                    <img class="img-fluid card-img" src="../assets/imgs/pic1.jpg" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                      </h5>
+                      <small class="card-description mb-3"></small>
+                    </div>
+                    <div class="card-footer mb-3">
+                      <div class="text-center mt-3">
+                        <a href="#" class="align-self-end btn btn-warning view zak card-link">View</a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4 mb-5">
-                <div class="card bg-dark text-white">
-                  <img class="img-fluid" src="../assets/imgs/woman.jpg" alt="">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Workout 3
-                    </h5>
-                    <p>Opis treninga 3, tezina blabla bla bla</p>
-                    <div class="text-center">
-                      <a href="#" class="btn btn-warning view">View</a>
+                <div class="col-md-4 mb-5">
+                  <div class="card h-100 bg-dark text-white">
+                    <img class="img-fluid card-img" src="../assets/imgs/pic2.jpg" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                      </h5>
+                      <small class="card-description mb-3"></small>
+                    </div>
+                    <div class="card-footer mb-3">
+                      <div class="text-center mt-3">
+                        <a href="#" class="btn btn-warning view zak card-link">View</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                  <div class="card h-100 bg-dark text-white">
+                    <img class="img-fluid card-img" src="../assets/imgs/woman.jpg" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                      </h5>
+                      <small class="card-description mb-3"></small>
+                    </div>
+                    <div class="card-footer mb-3">
+                      <div class="text-center mt-3">
+                        <a href="" class="btn btn-warning view zak card-link">View</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -263,59 +324,73 @@
             </div>
           </div>
         </div>
-      </div>
-      
-    </section>
-  </div>
 
-  <div class="col-2 go2back">
-    <div class="mr-3 ml-3 ads intro text-center">
-      <br> <br> <br>
-      <h3>A</h3><h3>D</h3><h3>V</h3><h3>E</h3><h3>R</h3><h3>T</h3><h3>I</h3><h3>S</h3><h3>E</h3><h3>M</h3><h3>E</h3><h3>N</h3><h3>T</h3><h3>S</h3>
-      <br> <br> <br>
+      </section>
+    </div>
+
+    <div class="col-2 go2back">
+      <div class="mr-3 ml-3 ads intro text-center">
+        &nbsp;
+        <h3>A</h3>
+        <h3>D</h3>
+        <h3>V</h3>
+        <h3>E</h3>
+        <h3>R</h3>
+        <h3>T</h3>
+        <h3>I</h3>
+        <h3>S</h3>
+        <h3>E</h3>
+        <h3>M</h3>
+        <h3>E</h3>
+        <h3>N</h3>
+        <h3>T</h3>
+      </div>
     </div>
   </div>
-</div>
 
 
 
-    <section>
-      <div class="footerATLAS text-white">
-        <div class="col-md-12 pt-5 pb-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4 mb-5">
-                <h5>About us</h5>
-                <p class="font-weight-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nobis nihil eum, dolorem ut harum, possimus eligendi eaque cupiditate expedita.</p>
-              </div>
-              <div class="offset-md-4 col-md-4">
-                <h5>Any questions?</h5>
+  <section>
+    <div class="footerATLAS text-white">
+      <div class="col-md-12 pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-5">
+              <h5>About Us</h5>
+              <p class="mb-0">
+                Hot coaches, new equipment, clean changing rooms. Everything is ready for you.
+              <p class="text-right">Are you?</p>
+              </p>
+            </div>
+            <div class="offset-md-4 col-md-4">
+              <h5>Any questions?</h5>
 
-                <p><i class="fas fa-map-marker-alt"></i> Bregovita 11, 11080 Zemun, Beograd</p>
-                <p><img src="../assets/icons/phoneDarker.svg" alt="" style="width:15px;"> +381 64 321 0990</p>
-                <p><i class="fab fa-telegram-plane"></i> info@atlas.com</p>
+              <p><i class="fas fa-map-marker-alt"></i> Bregovita 11, 11080 Zemun, Belgrade</p>
+              <p><img src="../assets/icons/phoneDarker.svg" alt="" width="15px"> +381 64 321 0990</p>
+              <p><i class=""><a class="footerIcon fab fa-telegram-plane" href="mailto:info@atlas.com">
+                    info@atlas.com</i></a></p>
 
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <div class="footer bg-warning text-black text-center">
-        <div class="row">
-          <div class="col-md-12 pt-2">
-            <p>
-              &copy; 2020 Divjak Marko, Mitic Natalija
+  <section>
+    <div class="footer bg-warning text-black text-center">
+      <div class="row">
+        <div class="col-md-12 pt-2">
+          <p>
+            &copy; 2020 Divjak Marko, Mitić Natalija
             <br>
-              Odsek za Softversko Inzenjerstvo Elektrotehnickog Fakulteta Univerziteta u Beogradu
-            </p>
-          </div>
+            Odsek za Softversko Inženjerstvo Elektrotehničkog Fakulteta Univerziteta u Beogradu
+          </p>
         </div>
+      </div>
 
-    </section>
+  </section>
 
-  </body>
+</body>
 
 </html>

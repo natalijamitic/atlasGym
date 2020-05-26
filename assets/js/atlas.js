@@ -1,5 +1,9 @@
 var lang = 0; //0-serbian 1-english
 
+function setEnglish() {
+    lang = 1;
+}
+
 
 //******** INDEX PAGE ***********/
 function compare(a, b) {
