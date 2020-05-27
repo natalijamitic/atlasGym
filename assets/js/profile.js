@@ -1,7 +1,7 @@
 function populateProfileWithBookedTrainings() {
     let container = document.getElementById('bookedTrainings');
     let days = [['Nedelja', 'Ponedeljak', 'Utorak', 'Sreda', 'Četvrtak', 'Petak', 'Subota'],
-                ['sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']];
+                ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']];
     for(let i = 0; i < user.booked.length; i++) {
         let div = document.createElement('div');
         div.setAttribute('class', 'col-lg-4 col-md-6 mb-5');
