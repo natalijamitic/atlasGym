@@ -101,6 +101,8 @@ function writeTraining(id) {
         $("#tooltipKomentar").data("title", "In order to comment, you need to attend this workout.")
         $("#tooltipOcena").data("title", "In order to leave a grade, you need to attend this workout.")
     }
+
+    document.getElementById("ytVideo").src = workout.video;
 }
 
 function writeComments(id) {

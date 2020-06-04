@@ -30,7 +30,7 @@ if(sessionStorage.getItem("workouts") === null) {
                 text: "Best workout in Serbia"
             }],
             imgs: ["../assets/imgs/yoga/yoga1.jpg", "../assets/imgs/yoga/yoga2.jpg", "../assets/imgs/yoga/yoga3.jpg", "../assets/imgs/yoga/yoga4.jpg", "../assets/imgs/yoga/yoga5.jpg", "../assets/imgs/yoga/yoga6.jpg", "../assets/imgs/yoga/yoga7.jpg", "../assets/imgs/yoga/yoga8.jpg"],
-            video: "",
+            video: "https://www.youtube.com/embed/v7AYKMP6rOE",
             profile: "../assets/imgs/yoga/yoga6.jpg",
     
             trainings: [{
@@ -81,7 +81,7 @@ if(sessionStorage.getItem("workouts") === null) {
             gradesCnt: 100,
             comments: [],
             imgs: ["../assets/imgs/yoga/yoga9.jpg", "../assets/imgs/yoga/yoga10.jpg", "../assets/imgs/yoga/yoga11.jpg", "../assets/imgs/yoga/yoga12.jpg", "../assets/imgs/yoga/yoga13.jpg", "../assets/imgs/yoga/yoga14.jpg", "../assets/imgs/yoga/yoga15.jpg", "../assets/imgs/yoga/yoga16.jpg"],
-            video: "",
+            video: "https://www.youtube.com/embed/YeaBUK6liD8",
             profile: "../assets/imgs/yoga/yoga5.jpg",
     
             trainings: [{
@@ -122,7 +122,7 @@ if(sessionStorage.getItem("workouts") === null) {
             gradesCnt: 100,
             comments: [],
             imgs: ["../assets/imgs/yoga/yoga11.jpg", "../assets/imgs/yoga/yoga12.jpg", "../assets/imgs/yoga/yoga13.jpg", "../assets/imgs/yoga/yoga14.jpg", "../assets/imgs/yoga/yoga5.jpg", "../assets/imgs/yoga/yoga6.jpg", "../assets/imgs/yoga/yoga7.jpg", "../assets/imgs/yoga/yoga8.jpg"],
-            video: "",
+            video: "https://www.youtube.com/embed/t2z8ZsAP2Vw",
             profile: "../assets/imgs/yoga/yoga4.jpg",
     
             trainings: [{
@@ -163,7 +163,7 @@ if(sessionStorage.getItem("workouts") === null) {
             gradesCnt: 100,
             comments: [],
             imgs: ["../assets/imgs/yoga/yoga1.jpg", "../assets/imgs/yoga/yoga2.jpg", "../assets/imgs/yoga/yoga3.jpg", "../assets/imgs/yoga/yoga4.jpg", "../assets/imgs/yoga/yoga5.jpg", "../assets/imgs/yoga/yoga16.jpg", "../assets/imgs/yoga/yoga10.jpg", "../assets/imgs/yoga/yoga11.jpg"],
-            video: "",
+            video: "https://www.youtube.com/embed/K-PpDkbcNGo",
             profile: "../assets/imgs/yoga/yoga1.jpg",
     
             trainings: [{
@@ -214,7 +214,7 @@ if(sessionStorage.getItem("workouts") === null) {
             gradesCnt: 100,
             comments: [],
             imgs: ["../assets/imgs/yoga/yoga11.jpg", "../assets/imgs/yoga/yoga12.jpg", "../assets/imgs/yoga/yoga13.jpg", "../assets/imgs/yoga/yoga14.jpg", "../assets/imgs/yoga/yoga5.jpg", "../assets/imgs/yoga/yoga6.jpg", "../assets/imgs/yoga/yoga7.jpg", "../assets/imgs/yoga/yoga8.jpg"],
-            video: "",
+            video: "https://www.youtube.com/embed/RDQmnzuE2q4",
             profile: "../assets/imgs/yoga/yoga2.jpg",
     
             trainings: [
@@ -241,7 +241,7 @@ if(sessionStorage.getItem("workouts") === null) {
             gradesCnt: 100,
             comments: [],
             imgs: ["../assets/imgs/yoga/yoga9.jpg", "../assets/imgs/yoga/yoga12.jpg", "../assets/imgs/yoga/yoga14.jpg", "../assets/imgs/yoga/yoga14.jpg", "../assets/imgs/yoga/yoga5.jpg", "../assets/imgs/yoga/yoga1.jpg", "../assets/imgs/yoga/yoga2.jpg", "../assets/imgs/yoga/yoga3.jpg"],
-            video: "",
+            video: "https://www.youtube.com/embed/K5I1QbVF1EI",
             profile: "../assets/imgs/yoga/yoga3.jpg",
     
             trainings: [{
@@ -285,7 +285,7 @@ if(sessionStorage.getItem("workouts") === null) {
                 text: "Odlican instruktor, vrlo prijatna sala, sve pohvale"
             }],
             imgs: ["../assets/imgs/core/core1.jpg", "../assets/imgs/core/core2.jpg", "../assets/imgs/core/core3.jpg", "../assets/imgs/core/core4.jpg", "../assets/imgs/core/core5.jpg", "../assets/imgs/core/core6.jpg", "../assets/imgs/core/core7.jpg", "../assets/imgs/core/core8.jpg"],
-            video: "",
+            video: "https://www.youtube.com/embed/glxrwC9zsHY",
             profile: "../assets/imgs/core/core1.jpg",
     
             trainings: [{
@@ -337,7 +337,7 @@ if(sessionStorage.getItem("workouts") === null) {
             gradesCnt: 100,
             imgs: ["../assets/imgs/core/core5.jpg", "../assets/imgs/core/core6.jpg", "../assets/imgs/core/core7.jpg", "../assets/imgs/core/core8.jpg", "../assets/imgs/core/core9.jpg", "../assets/imgs/core/core10.jpg", "../assets/imgs/core/core11.jpg", "../assets/imgs/core/core12.jpg"],
             comments: [],
-            video: "",
+            video: "https://www.youtube.com/embed/-b2lNLq3EaA",
             profile: "../assets/imgs/core/core5.jpg",
     
             trainings: [{
@@ -389,7 +389,7 @@ if(sessionStorage.getItem("workouts") === null) {
             gradesCnt: 100,
             imgs: ["../assets/imgs/core/core7.jpg", "../assets/imgs/core/core8.jpg", "../assets/imgs/core/core9.jpg", "../assets/imgs/core/core10.jpg", "../assets/imgs/core/core11.jpg", "../assets/imgs/core/core12.jpg", "../assets/imgs/core/core13.jpg", "../assets/imgs/core/core14.jpg"],
             comments: [],
-            video: "",
+            video: "https://www.youtube.com/embed/dJlFmxiL11s",
             profile: "../assets/imgs/core/core12.jpg",
     
             trainings: [{
@@ -440,7 +440,7 @@ if(sessionStorage.getItem("workouts") === null) {
             gradesCnt: 100,
             comments: [],
             imgs: ["../assets/imgs/cardio/cardio3.jpg", "../assets/imgs/cardio/cardio7.jpg", "../assets/imgs/cardio/cardio12.jpg", "../assets/imgs/cardio/cardio13.jpg", "../assets/imgs/cardio/cardio14.jpg", "../assets/imgs/cardio/cardio15.jpg", "../assets/imgs/cardio/cardio16.jpg", "../assets/imgs/cardio/cardio17.jpg"],
-            video: "",
+            video: "https://www.youtube.com/embed/KxKJEIqS1HQ",
             profile: "../assets/imgs/cardio/cardio4.jpg",
     
             trainings: [{
@@ -499,7 +499,7 @@ if(sessionStorage.getItem("workouts") === null) {
             }],
             imgs: ["../assets/imgs/cardio/cardio1.jpg", "../assets/imgs/cardio/cardio2.jpg", "../assets/imgs/cardio/cardio4.jpg", "../assets/imgs/cardio/cardio5.jpg", "../assets/imgs/cardio/cardio6.jpg", "../assets/imgs/cardio/cardio8.jpg", "../assets/imgs/cardio/cardio9.jpg", "../assets/imgs/cardio/cardio10.jpg"],
             profile: "../assets/imgs/cardio/cardio2.jpg",
-            video: "",
+            video:"https://www.youtube.com/embed/M60AVSKVqUA",
     
             trainings: [{
                 day: 1,
@@ -550,7 +550,7 @@ if(sessionStorage.getItem("workouts") === null) {
             comments: [],
             imgs: ["../assets/imgs/cardio/cardio11.jpg", "../assets/imgs/cardio/cardio2.jpg", "../assets/imgs/cardio/cardio4.jpg", "../assets/imgs/cardio/cardio5.jpg", "../assets/imgs/cardio/cardio6.jpg", "../assets/imgs/cardio/cardio8.jpg", "../assets/imgs/cardio/cardio9.jpg", "../assets/imgs/cardio/cardio10.jpg"],
             profile: "../assets/imgs/cardio/cardio11.jpg",
-            video: "",
+            video: "https://www.youtube.com/embed/cZnsLVArIt8",
     
             trainings: [{
                 day: 1,
