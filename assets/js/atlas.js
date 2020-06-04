@@ -48,12 +48,16 @@ function populateTraining() {
 }
 
 function writeTraining(id) {
-    
-    document.getElementsByClassName("card-fullName")[0].innerText = getTypeName(workout.category) + " " + workout.name;
+    let newLang = lang ? "srb" : "eng";
+    document.getElementById("langLink").href = "../" + newLang + "/treninzi-pojedinacno.html?id=" + (id + 1);
+    document.getElementById("langLink2").href = "../" + newLang + "/treninzi-pojedinacno.html?id=" + (id + 1);
+
+    document.getElementsByClassName("card-fullName")[0].innerText = getTypeName(workout.category.toLowerCase()) + " " + workout.name;
     document.getElementsByClassName("card-link")[0].href = "treninzi-grupno.html?tip=" + workout.category;
+
     document.getElementsByClassName("card-name")[0].innerText = workout.name;
-    document.getElementsByClassName("card-type")[0].innerText = getTypeName(workout.category);
-    document.getElementsByClassName("card-type")[1].innerText = getTypeName(workout.category) + "\t";
+    document.getElementsByClassName("card-type")[0].innerText = getTypeName(workout.category.toLowerCase());
+    document.getElementsByClassName("card-type")[1].innerText = getTypeName(workout.category.toLowerCase()) + "\t";
     document.getElementsByClassName("card-description")[0].innerText = workout.description[lang];
 
     document.getElementsByClassName("card-duration")[0].innerText = workout.duration;
@@ -89,6 +93,14 @@ function writeTraining(id) {
     }
 
     writeComments(id);
+    
+    if (!lang) {    
+        $("#tooltipKomentar").data("title", "Ne možete komentarisati trening koji niste posetili.")
+        $("#tooltipOcena").data("title", "Ne možete ocenjivati trening koji niste posetili.")
+    } else {
+        $("#tooltipKomentar").data("title", "In order to comment, you need to attend this workout.")
+        $("#tooltipOcena").data("title", "In order to leave a grade, you need to attend this workout.")
+    }
 }
 
 function writeComments(id) {
@@ -142,6 +154,11 @@ function getParameterByName(name, url) {
 }
 
 function writeGroupTraining(workouts) {
+    let newLang = lang ? "srb" : "eng";
+    let type = getParameterByName('tip');
+    document.getElementById("langLink").href = "../" + newLang + "/treninzi-grupno.html?tip=" + type;
+    document.getElementById("langLink2").href = "../" + newLang + "/treninzi-grupno.html?tip=" + type;
+
     document.getElementsByClassName("card-type")[0].innerText = getTypeName();
     let titles = document.getElementsByClassName("card-title");
     let durations = document.getElementsByClassName("card-duration");

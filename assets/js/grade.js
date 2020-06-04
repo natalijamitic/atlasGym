@@ -25,7 +25,10 @@ function addNewComment() {
 
     let comment = document.getElementById('addComment').value;
     let name = document.getElementById('username').value;
-    if(comment.length == 0 || name.length == 0) return;
+    if (name.length == 0)
+        name = "Anonymous"
+
+    if (comment.length == 0) return;
 
     workouts[id].comments.push({
         'name': name,

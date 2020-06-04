@@ -34,8 +34,9 @@ function populateBookTrainings() {
 }
 
 function createWorkoutPreview(workout) {
-    let text = "Vidi";
-    if(lang == 1) text = "Checkout";
+    let text = lang ? "Checkout" : "Vidi";
+    let duration = lang ? "Duration" : "Trajanje";
+    let difficulty = lang ? "Difficulty" : "Težina";
     return `<div class="col-lg-4 col-md-6 mb-5 filter-${workout.category}">
     <div class="card h-100 bg-dark text-white">
         <img class="img-fluid" src="${workout.profile}" alt="">
@@ -43,8 +44,8 @@ function createWorkoutPreview(workout) {
             <h5 class="card-title">
                 ${workout.category}&nbsp;${workout.name}
             </h5>
-            <p>Trajanje: ${workout.duration}</p>
-            <p>Tezina: ${workout.level}</p>
+            <p>${duration}: ${workout.duration}</p>
+            <p>${difficulty}: ${workout.level}</p>
         </div>
         <div class="card-footer mb-3 mt-0">
             <div class="text-center mt-3">
@@ -71,7 +72,7 @@ function bookTraining(id, i) {
     let minutes = minutesToTraining(workouts[id-1].trainings[i]);
     let text = (lang == 0) ? "Otkaži" : "Cancel";
     if(minutes > 30)
-        button = `<button class="btn btn-outline-danger" onclick="cancelTraining(${id},${i})">${text}</button>`;
+        button = `<button class="btn btn-outline-danger btn-book" onclick="cancelTraining(${id},${i})">${text}</button>`;
     else button = '';
 
     parent.innerHTML = button;
@@ -92,7 +93,7 @@ function cancelTraining(id, ix) {
     parent.innerHTML = '';
     let text = (lang == 0) ? "Zakaži" : "Book";
     parent.innerHTML =
-        `<button class="btn btn-outline-success" onclick="bookTraining(${id},${ix})">${text}</button>`;
+        `<button class="btn btn-outline-success btn-book" onclick="bookTraining(${id},${ix})">${text}</button>`;
 }
 
 function createModal(workout) {
@@ -115,9 +116,9 @@ function createModal(workout) {
         }
         let minutes = minutesToTraining(workout.trainings[i]);
         if(minutes > 1 && workout.trainings[i].available > 0 && !hasBooked)
-            button = `<button class="btn btn-outline-success" onclick="bookTraining(${workout.id},${i})">${(lang == 0) ? "Zakaži" : "Book"}</button>`;
+            button = `<button class="btn btn-outline-success btn-book" onclick="bookTraining(${workout.id},${i})">${(lang == 0) ? "Zakaži" : "Book"}</button>`;
         else if(minutes > 30 && hasBooked)
-            button = `<button class="btn btn-outline-danger" onclick="cancelTraining(${workout.id},${i})">${(lang == 0) ? "Otkaži" : "Cancel"}</button>`;
+            button = `<button class="btn btn-outline-danger btn-book" onclick="cancelTraining(${workout.id},${i})">${(lang == 0) ? "Otkaži" : "Cancel"}</button>`;
         
         html = html + `
         <tr>

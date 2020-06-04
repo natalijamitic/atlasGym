@@ -28,7 +28,9 @@ function populateProfileWithBookedTrainings() {
             <div class="card-footer mb-3">
                 <div class="text-center mt-3">
                     <button class="btn btn-outline-warning trening mb-3">
-                        ${days[lang][workout.trainings[user.booked[i].trainingIndex].day]}&nbsp;${workout.trainings[user.booked[i].trainingIndex].time}
+                        ${days[lang][workout.trainings[user.booked[i].trainingIndex].day]}
+                        <br>
+                        ${workout.trainings[user.booked[i].trainingIndex].time}
                     </button>
                     <br>
                     ${button}

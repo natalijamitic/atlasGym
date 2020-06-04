@@ -248,6 +248,7 @@ body {
   width: 100%;  
   max-width: none;
   height: auto;
+  max-height: 120vh;
 }
 
 .carousel-inner {
@@ -445,11 +446,29 @@ h2.inline {
   width: 200px;
   height: 50px;
   font-size: 20px;
+  margin-top: 10px !important;
 }
 
 .btn-warning.view:hover, .btn-warning.book:hover, .btn-warning.viewMax:hover {
   background: #fff;
   box-shadow: none;
+}
+
+
+
+@media only screen and (max-width: 360px) {
+  .bookWorkout {
+    margin-top: 15px !important;
+    padding-left: -2px !important;
+    margin-left: -2px !important;
+    width: 150px !important;
+    height: 100px !important;
+    margin: auto;
+  }
+
+  .btn-book {
+    margin-left: -15px;
+  }
 }
 
 /* Best Training */

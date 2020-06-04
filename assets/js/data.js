@@ -611,7 +611,7 @@ if(sessionStorage.getItem('user') === null) {
         workoutId je id u data nizu, znaci da je za 1 veci od indeksa u workouts nizu
     */
     user = {
-        attendedTrainings: [1, 3, 4, 7, 11],
+        attendedTrainings: [1, 3, 4, 7, 10, 11],
         booked: []
     }
     sessionStorage.setItem("user", JSON.stringify(user));
