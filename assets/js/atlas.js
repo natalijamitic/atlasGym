@@ -260,10 +260,12 @@ function makePDF(type) {
     doc.text(20, 80, text[lang][i++])
 
     doc.text(30, 90, text[lang][i++])
-    doc.text(85, 90, $("#inputName").val().substring(0, 28) + "...", { maxWidth: "96" });
+    let name = $("#inputName").val().length > 29 ? $("#inputName").val().substring(0, 28) + "..." : $("#inputName").val()
+    doc.text(85, 90, name, { maxWidth: "96" });
 
     doc.text(30, 100, text[lang][i++])
-    doc.text(85, 100, $("#inputLastName").val().substring(0, 28) + "...", { maxWidth: "96" });
+    name = $("#inputLastName").val().length > 29 ? $("#inputLastName").val().substring(0, 28) + "..." : $("#inputLastName").val()
+    doc.text(85, 100, name, { maxWidth: "96" });
 
     doc.text(30, 110, "email:")
     doc.text(85, 110, $("#inputEmail").val())
@@ -291,7 +293,7 @@ function makePDF(type) {
 
     if (type == "masazu")
         doc.save("Masaza.pdf");
-    else if (type == "nutricionista")
+    else if (type == "nutricionistu")
         doc.save("Nutricionista.pdf")
     else if (type == "massage")
         doc.save("Massage.pdf")
