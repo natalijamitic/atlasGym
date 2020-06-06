@@ -34,7 +34,7 @@ function populateBookTrainings() {
 }
 
 function createWorkoutPreview(workout) {
-    let text = lang ? "Checkout" : "Vidi";
+    let text = lang ? "View" : "Vidi";
     let duration = lang ? "Duration" : "Trajanje";
     let difficulty = lang ? "Difficulty" : "Težina";
     return `<div class="col-lg-4 col-md-6 mb-5 filter-${workout.category}">

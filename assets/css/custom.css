@@ -454,7 +454,20 @@ h2.inline {
   box-shadow: none;
 }
 
-
+@media only screen and (max-width: 850px) {
+  .btn-warning.view {
+    font-size: 15px;
+    width: 116px;
+    margin-left: -5px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .btn-warning.view {
+    font-size: 14px;
+    width: 113px;
+    margin-left: -10px;
+  }
+}
 
 @media only screen and (max-width: 360px) {
   .bookWorkout {
